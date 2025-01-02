@@ -1,0 +1,46 @@
+############################################################
+# Kite: Architecture Simulator for RISC-V Instruction Set  #
+# Developed by William J. Song                             #
+# Computer Architecture and Systems Lab, Yonsei University #
+# Version: 1.12                                            #
+############################################################
+
+# Kite register state
+#   1. Each line of state file defines "register name = data value".
+#   2. Register state can define only 32 integer registers (e.g., x31).
+#   3. x0 register is hard-wired to zero. Any non-zero values written to x0
+#      register is discarded.
+
+x0 = 0
+x1 = 0
+x2 = 4096
+x3 = 0
+x4 = 0
+x5 = 0
+x6 = 0
+x7 = 0
+x8 = 0
+x9 = 0
+x10 = 1024
+x11 = 2016
+x12 = 3008
+x13 = 5
+x14 = 8
+x15 = 4
+x16 = 0
+x17 = 0
+x18 = 0
+x19 = 0
+x20 = 0
+x21 = 0
+x22 = 0
+x23 = 0
+x24 = 0
+x25 = 0
+x26 = 0
+x27 = 0
+x28 = 0
+x29 = 0
+x30 = 0
+x31 = 0
+

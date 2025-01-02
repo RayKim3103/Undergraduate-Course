@@ -1,0 +1,19 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "12:33:16 11/28/2024 "
+* "netlist" "norepeater_1st.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in =   0.            
++ net14 =  40.8225n       
++ net17 =   1.1000        
++ out =  40.8225n       
++ vdd =   1.1000        
++ vss =   0.            
+***   END: Saved Operating Point ***                     

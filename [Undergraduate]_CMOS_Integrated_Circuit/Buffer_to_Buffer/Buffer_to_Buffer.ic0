@@ -1,0 +1,24 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "22:24:43 11/25/2024 "
+* "netlist" "Buffer_to_Buffer.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in =   0.            
++ net010 =   1.1000        
++ net011 =   1.1000        
++ net012 =   1.1000        
++ net09 =   1.1000        
++ out =  45.1700n       
++ temp1 =  74.3238n       
++ temp2 =  74.3238n       
++ temp3 =  74.3238n       
++ vdd =   1.1000        
++ vss =   0.            
+***   END: Saved Operating Point ***                     

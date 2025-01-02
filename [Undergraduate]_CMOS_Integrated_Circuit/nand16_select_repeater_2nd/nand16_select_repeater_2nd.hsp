@@ -1,0 +1,145 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  2024_project_circuit
+* Top Cell Name: nand16_select_repeater_2nd
+* View Name:     schematic
+* Netlisted on:  Nov 29 03:14:03 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+
+
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    nor2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nor2 in_A in_B out vdd vss
+*.PININFO in_A:I in_B:I out:O vdd:B vss:B
+MM1 out in_B vss vss nmos W=nw L=45n
+MM0 out in_A vss vss nmos W=nw L=45n
+MM3 out in_A net4 vdd pmos W=pw L=45n
+MM2 net4 in_B vdd vdd pmos W=pw L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    nand4
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand4 in_A in_B in_C in_D out vdd vss
+*.PININFO in_A:I in_B:I in_C:I in_D:I out:O vdd:B vss:B
+MM7 net56 in_D vss vss nmos W=nw L=45n
+MM2 net54 in_C net56 vss nmos W=nw L=45n
+MM1 net55 in_B net54 vss nmos W=nw L=45n
+MM0 out in_A net55 vss nmos W=nw L=45n
+MM6 out in_D vdd vdd pmos W=pw L=45n
+MM5 out in_C vdd vdd pmos W=pw L=45n
+MM4 out in_B vdd vdd pmos W=pw L=45n
+MM3 out in_A vdd vdd pmos W=pw L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 in_A in_B out vdd vss
+*.PININFO in_A:I in_B:I out:O vdd:B vss:B
+MM1 net7 in_B vss vss nmos W=nw L=45n
+MM0 out in_A net7 vss nmos W=nw L=45n
+MM3 out in_B vdd vdd pmos W=pw L=45n
+MM2 out in_A vdd vdd pmos W=pw L=45n
+.ENDS
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inverter in out vdd vss
+*.PININFO in:I out:O vdd:B vss:B
+MM0 out in vss vss nmos W=nw L=45n
+MM1 out in vdd vdd pmos W=pw L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    nand16_select_repeater_2nd
+* View Name:    schematic
+************************************************************************
+
+*.PININFO in1:I out:O vdd:B vss:B
+CC26 net031 vss 5f $[CP]
+CC25 net030 vss 5f $[CP]
+CC21 net029 vss 5f $[CP]
+CC20 net028 vss 5f $[CP]
+CC19 net027 vss 5f $[CP]
+CC18 net026 vss 5f $[CP]
+CC17 net025 vss 5f $[CP]
+CC16 net024 vss 5f $[CP]
+CC0 out vss 100f $[CP]
+CC1 net207 vss 8.37f $[CP]
+CC2 net206 vss 8.37f $[CP]
+CC3 net205 vss 8.37f $[CP]
+CC4 net204 vss 8.37f $[CP]
+CC5 net203 vss 8.37f $[CP]
+CC6 net202 vss 8.37f $[CP]
+CC7 net201 vss 8.37f $[CP]
+CC8 net200 vss 8.37f $[CP]
+CC9 net199 vss 8.37f $[CP]
+CC10 net198 vss 8.37f $[CP]
+CC11 net197 vss 8.37f $[CP]
+CC12 net196 vss 8.37f $[CP]
+CC13 net195 vss 8.37f $[CP]
+CC14 net194 vss 8.37f $[CP]
+CC15 net193 vss 8.37f $[CP]
+XI6 temp5 vss net024 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI9 temp5 vss net207 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI11 temp5 vss net206 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI12 temp5 vss net205 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI13 temp5 vss net204 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI14 temp5 vss net203 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI15 temp5 vss net202 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI17 temp5 vss net201 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI16 temp5 vss net200 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI18 temp5 vss net199 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI19 temp5 vss net198 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI20 temp5 vss net197 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI21 temp5 vss net196 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI23 temp5 vss net195 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI22 temp5 vss net194 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI24 temp5 vss net193 vdd vss / nor2 pw=2.39e-06 nw=7.7e-07
+XI0 in1 vdd vdd vdd temp1 vdd vss / nand4 pw=1.86e-06 nw=4.8e-06
+XI3 temp2 vdd vdd vdd temp5 vdd vss / nand4 pw=9.109999999999999e-06 
++ nw=2.352e-05
+XI8 temp7 vdd vdd vdd temp8 vdd vss / nand4 pw=4.13e-06 nw=1.067e-05
+XI10 temp9 vdd vdd vdd out vdd vss / nand4 pw=1.429e-05 nw=3.687e-05
+XI7 net031 vdd temp7 vdd vss / nand2 pw=2.8e-06 nw=3.62e-06
+XI2 temp8 vdd temp9 vdd vss / nand2 pw=9.69e-06 nw=1.25e-05
+XI28 net048 net030 vdd vss / inverter pw=1.2e-06 nw=7.7e-07
+XI27 net029 net048 vdd vss / inverter pw=1.2e-06 nw=7.7e-07
+XI26 net049 net028 vdd vss / inverter pw=1.2e-06 nw=7.7e-07
+XI5 net027 net049 vdd vss / inverter pw=1.2e-06 nw=7.7e-07
+XI4 net050 net026 vdd vss / inverter pw=1.2e-06 nw=7.7e-07
+XI25 net025 net050 vdd vss / inverter pw=1.2e-06 nw=7.7e-07
+XI1 temp1 temp2 vdd vss / inverter pw=6.18e-06 nw=3.99e-06
+RR4 net030 net031 5K $[RP]
+RR2 net028 net029 5K $[RP]
+RR1 net026 net027 5K $[RP]
+RR0 net024 net025 5K $[RP]
+

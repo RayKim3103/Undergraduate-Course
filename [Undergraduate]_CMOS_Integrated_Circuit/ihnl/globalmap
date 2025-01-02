@@ -1,0 +1,12 @@
+CADENCE IHNL01070
+$model
+2024_project_circuit/nand4/schematic nand4
+2024_project_circuit/nand2/schematic nand2
+2024_project_circuit/nand16_select_repeater_2nd/schematic nand16_select_repeater_2nd
+Test1/inverter/schematic inverter
+2024_project_circuit/nor2/schematic nor2
+$endmodel
+$net
+$endnet
+$param
+$endparam

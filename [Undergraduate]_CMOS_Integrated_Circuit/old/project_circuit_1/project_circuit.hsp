@@ -1,0 +1,211 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  2024_project_circuit
+* Top Cell Name: project_circuit
+* View Name:     schematic
+* Netlisted on:  Nov 18 17:48:05 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+
+
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 in_A in_B out vdd vss
+*.PININFO in_A:I in_B:I out:O vdd:B vss:B
+MM1 net7 in_B vss vss nmos W=n_width L=45n
+MM0 out in_A net7 vss nmos W=n_width L=45n
+MM3 out in_B vdd vdd pmos W=p_width L=45n
+MM2 out in_A vdd vdd pmos W=p_width L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    nor2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nor2 in_A in_B out vdd vss
+*.PININFO in_A:I in_B:I out:O vdd:B vss:B
+MM1 out in_B vss vss nmos W=n_width L=45n
+MM0 out in_A vss vss nmos W=n_width L=45n
+MM3 out in_A net4 vdd pmos W=p_width L=45n
+MM2 net4 in_B vdd vdd pmos W=p_width L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    and16
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT and16 in1 in2 in3 in4 in5 in6 in7 in8 in9 in10 in11 in12 in13 in14 
++ in15 in16 out vdd vss
+*.PININFO in1:I in2:I in3:I in4:I in5:I in6:I in7:I in8:I in9:I in10:I in11:I 
+*.PININFO in12:I in13:I in14:I in15:I in16:I out:O vdd:B vss:B
+XI6 in13 in14 net030 vdd vss / nand2 n_width=2.2u p_width=2.2u
+XI5 in11 in12 net029 vdd vss / nand2 n_width=2.2u p_width=2.2u
+XI7 in15 in16 net031 vdd vss / nand2 n_width=2.2u p_width=2.2u
+XI4 in9 in10 net032 vdd vss / nand2 n_width=2.2u p_width=2.2u
+XI13 net014 net013 net022 vdd vss / nand2 n_width=7.84u p_width=7.83u
+XI3 in7 in8 net3 vdd vss / nand2 n_width=2.2u p_width=2.2u
+XI2 in5 in6 net8 vdd vss / nand2 n_width=2.2u p_width=2.2u
+XI1 in3 in4 net13 vdd vss / nand2 n_width=2.2u p_width=2.2u
+XI0 in1 in2 net16 vdd vss / nand2 n_width=2.2u p_width=2.2u
+XI12 net016 net015 net017 vdd vss / nand2 n_width=7.84u p_width=7.83u
+XI8 net16 net13 net016 vdd vss / nor2 n_width=1.94u p_width=7.78u
+XI14 net017 net022 out vdd vss / nor2 n_width=6.96u p_width=27.86u
+XI11 net030 net031 net013 vdd vss / nor2 n_width=1.94u p_width=7.78u
+XI10 net032 net029 net014 vdd vss / nor2 n_width=1.94u p_width=7.78u
+XI9 net8 net3 net015 vdd vss / nor2 n_width=1.94u p_width=7.78u
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    nand3
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand3 in_A in_B in_C out vdd vss
+*.PININFO in_A:I in_B:I in_C:I out:O vdd:B vss:B
+MM2 net9 in_C vss vss nmos W=n_width L=45n
+MM1 net8 in_B net9 vss nmos W=n_width L=45n
+MM0 out in_A net8 vss nmos W=n_width L=45n
+MM5 out in_C vdd vdd pmos W=p_width L=45n
+MM4 out in_B vdd vdd pmos W=p_width L=45n
+MM3 out in_A vdd vdd pmos W=p_width L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    nand4
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand4 in_A in_B in_C in_D out vdd vss
+*.PININFO in_A:I in_B:I in_C:I in_D:I out:O vdd:B vss:B
+MM7 net56 in_D vss vss nmos W=n_width L=45n
+MM2 net54 in_C net56 vss nmos W=n_width L=45n
+MM1 net55 in_B net54 vss nmos W=n_width L=45n
+MM0 out in_A net55 vss nmos W=n_width L=45n
+MM6 out in_D vdd vdd pmos W=p_width L=45n
+MM5 out in_C vdd vdd pmos W=p_width L=45n
+MM4 out in_B vdd vdd pmos W=p_width L=45n
+MM3 out in_A vdd vdd pmos W=p_width L=45n
+.ENDS
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inverter in out vdd vss
+*.PININFO in:I out:O vdd:B vss:B
+MM0 out in vss vss nmos W=n_width L=45n
+MM1 out in vdd vdd pmos W=p_width L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    mux16to1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux16to1 in1 in2 in3 in4 in5 in6 in7 in8 in9 in10 in11 in12 in13 in14 
++ in15 in16 out s0 s1 s2 s3 vdd vss
+*.PININFO in1:I in2:I in3:I in4:I in5:I in6:I in7:I in8:I in9:I in10:I in11:I 
+*.PININFO in12:I in13:I in14:I in15:I in16:I s0:I s1:I s2:I s3:I out:O vdd:B 
+*.PININFO vss:B
+XI24 temp1 ~s0 ~s1 net90 vdd vss / nand3 n_width=29.44u p_width=19.62u
+XI22 temp4 s0 s1 net93 vdd vss / nand3 n_width=29.44u p_width=19.62u
+XI21 temp3 s0 ~s1 net92 vdd vss / nand3 n_width=29.44u p_width=19.62u
+XI20 temp2 ~s0 s1 net91 vdd vss / nand3 n_width=29.44u p_width=19.62u
+XI15 in9 ~s2 ~s3 net104 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI14 in13 ~s2 ~s3 net97 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI13 in16 s2 s3 net100 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI12 in15 s2 ~s3 net99 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI11 in14 ~s2 s3 net98 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI10 in12 s2 s3 net107 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI9 in11 s2 ~s3 net106 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI8 in10 ~s2 s3 net83 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI7 in5 ~s2 ~s3 net6 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI6 in8 s2 s3 net5 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI5 in7 s2 ~s3 net1 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI4 in6 ~s2 s3 net2 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI3 in4 s2 s3 net7 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI2 in3 s2 ~s3 net3 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI1 in2 ~s2 s3 net4 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI0 in1 ~s2 ~s3 net8 vdd vss / nand3 n_width=12.34u p_width=8.23u
+XI23 net90 net91 net92 net93 out vdd vss / nand4 n_width=54.74u p_width=27.37u
+XI19 net97 net98 net99 net100 temp4 vdd vss / nand4 n_width=22.94u p_width=11.48u
+XI18 net104 net83 net106 net107 temp3 vdd vss / nand4 n_width=22.94u p_width=11.48u
+XI17 net6 net2 net1 net5 temp2 vdd vss / nand4 n_width=22.94u p_width=11.48u
+XI16 net8 net4 net3 net7 temp1 vdd vss / nand4 n_width=22.94u p_width=11.48u
+XI32 s2 ~s2 vdd vss / inverter n_width=1.1u p_width=2.2u
+XI31 s3 ~s3 vdd vss / inverter n_width=1.1u p_width=2.2u
+XI27 s1 ~s1 vdd vss / inverter n_width=1.1u p_width=2.2u
+XI28 s0 ~s0 vdd vss / inverter n_width=1.1u p_width=2.2u
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    project_circuit
+* View Name:    schematic
+************************************************************************
+
+*.PININFO a0:I a1:I a2:I a3:I a4:I a5:I a6:I a7:I a8:I a9:I a10:I a11:I a12:I 
+*.PININFO a13:I a14:I a15:I c0:I c1:I c2:I c3:I c4:I c5:I c6:I c7:I c8:I c9:I 
+*.PININFO c10:I c11:I c12:I c13:I c14:I c15:I s0:I s1:I s2:I s3:I out:O vdd:B 
+*.PININFO vss:B
+XI0 c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 cout vdd vss / and16
+XI16 a13 cout net44 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI15 a12 cout net43 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI14 a9 cout net45 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI13 a10 cout net47 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI12 a11 cout net48 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI11 a8 cout net46 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI10 a14 cout net42 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI9 a15 cout net41 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI8 a5 cout net50 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI5 a4 cout net52 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI1 a1 cout net55 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI4 a2 cout net54 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI3 a3 cout net53 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI2 a0 cout net56 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI6 a6 cout net51 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI7 a7 cout net49 vdd vss / nand2 n_width=1.74u p_width=1.75u
+XI17 y0 y1 y2 y3 y4 y5 y6 y7 y8 y9 y10 y11 y12 y13 y14 y15 out s0 s1 s2 s3 vdd 
++ vss / mux16to1
+CC0 out vss 100f $[CP]
+XI35 net41 y15 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI34 net42 y14 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI33 net44 y13 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI32 net43 y12 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI31 net46 y8 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI30 net45 y9 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI29 net47 y10 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI28 net48 y11 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI27 net49 y7 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI26 net50 y5 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI25 net51 y6 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI24 net52 y4 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI22 net54 y2 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI23 net53 y3 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI20 net55 y1 vdd vss / inverter n_width=2.54u p_width=5.07u
+XI19 net56 y0 vdd vss / inverter n_width=2.54u p_width=5.07u
+

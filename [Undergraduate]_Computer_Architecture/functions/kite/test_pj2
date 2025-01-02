@@ -1,0 +1,3 @@
+loop:
+lui x6, 4
+addi x6, x6, -1384

@@ -1,0 +1,46 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Test1
+* Top Cell Name: inverter_chain11
+* View Name:     schematic
+* Netlisted on:  Nov 10 23:33:17 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+
+
+
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inverter in out vdd vss
+*.PININFO in:I out:O vdd:B vss:B
+MM0 out in vss vss nmos W=1.1u L=45n
+MM1 out in vdd vdd pmos W=2.2u L=45n
+.ENDS
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    inverter_chain11
+* View Name:    schematic
+************************************************************************
+
+
+*.PININFO in:I out:O vdd:B vss:B
+XI1 temp out vdd vss / inverter
+XI0 in temp vdd vss / inverter
+
+

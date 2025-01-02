@@ -1,0 +1,69 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "03:03:50 11/29/2024 "
+* "netlist" "nand16_select_mux_2nd.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in1 =   0.            
++ net189 =  56.2269n       
++ net190 =  56.2269n       
++ net191 =  56.2269n       
++ net192 =  56.2269n       
++ net193 =  56.2269n       
++ net194 =  56.2269n       
++ net195 =  56.2269n       
++ net196 =  56.2269n       
++ net197 =  56.2269n       
++ net198 =  56.2269n       
++ net199 =  56.2269n       
++ net200 =  56.2269n       
++ net201 =  56.2269n       
++ net202 =  56.2269n       
++ net203 =  56.2269n       
++ out = 473.6885n       
++ temp1 =   1.1000        
++ temp2 =  74.1727n       
++ temp5 =   1.1000        
++ temp6 = 109.5132n       
++ temp7 =   1.1000        
++ temp8 = 526.9688n       
++ temp9 =   1.1000        
++ vdd =   1.1000        
++ vss =   0.            
++ xi10.net54 = 340.3609n       
++ xi10.net55 = 432.9038n       
++ xi10.net56 = 196.0596n       
++ xi8.net54 = 366.9691n       
++ xi8.net55 = 472.8400n       
++ xi8.net56 = 209.3557n       
++ xi3.net54 = 229.7344n       
++ xi3.net55 = 266.9694n       
++ xi3.net56 = 140.7446n       
++ xi0.net54 = 229.5567n       
++ xi0.net55 = 266.7629n       
++ xi0.net56 = 140.6357n       
++ xi2.net7 =  37.2288n       
++ xi7.net7 =  37.1946n       
++ xi14.net4 =   1.1000        
++ xi15.net4 =   1.1000        
++ xi16.net4 =   1.1000        
++ xi9.net4 =   1.1000        
++ xi11.net4 =   1.1000        
++ xi12.net4 =   1.1000        
++ xi13.net4 =   1.1000        
++ xi24.net4 =   1.1000        
++ xi23.net4 =   1.1000        
++ xi22.net4 =   1.1000        
++ xi21.net4 =   1.1000        
++ xi20.net4 =   1.1000        
++ xi19.net4 =   1.1000        
++ xi18.net4 =   1.1000        
++ xi17.net4 =   1.1000        
++ xi6.net4 =   1.1000        
+***   END: Saved Operating Point ***                     

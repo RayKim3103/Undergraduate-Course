@@ -1,0 +1,45 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Test1
+* Top Cell Name: FO1_delay
+* View Name:     schematic
+* Netlisted on:  Nov 27 17:30:43 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+
+
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inverter in out vdd vss
+*.PININFO in:I out:O vdd:B vss:B
+MM0 out in vss vss nmos W=nw L=45n
+MM1 out in vdd vdd pmos W=pw L=45n
+.ENDS
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    FO1_delay
+* View Name:    schematic
+************************************************************************
+
+*.PININFO in:I out:O vdd:B vss:B
+XI3 temp3 out vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI2 temp2 temp3 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI1 temp1 temp2 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI0 in temp1 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+

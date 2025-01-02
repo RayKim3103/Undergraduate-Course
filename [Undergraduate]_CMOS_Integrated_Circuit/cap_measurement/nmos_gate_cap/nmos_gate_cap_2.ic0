@@ -1,0 +1,19 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "21:45:05 11/28/2024 "
+* "netlist" "nmos_gate_cap_2.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in =   0.            
++ out =   1.1000        
++ temp1 =   1.1000        
++ temp2 =  74.6320n       
++ vdd =   1.1000        
++ vss =   0.            
+***   END: Saved Operating Point ***                     

@@ -1,0 +1,7 @@
+CADENCE IHNL01075
+
+2024_project_circuit nor2 schematic cds0
+2024_project_circuit nand4 schematic cds1
+2024_project_circuit nand2 schematic cds2
+Test1 inverter schematic cds3
+2024_project_circuit nand16_select_repeater_2nd schematic cds4

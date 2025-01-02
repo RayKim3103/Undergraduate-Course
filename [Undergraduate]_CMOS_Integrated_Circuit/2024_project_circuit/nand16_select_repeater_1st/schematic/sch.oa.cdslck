@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      2024_2_digital_15
+HostName                       VLSI-SYSTEM-WORKSTATION3
+ProcessIdentifier              28401
+ProcessCreationTime_UTC        1732794269
+ProcessCreationTime_Readable   Thu Nov 28 20:44:29 2024 KST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/2024_2_digital_15/cadence/minsung/2024_project_circuit/nand16_select_repeater_1st/schematic/sch.oa.cdslck
+TimeEditLocked                 Fri Nov 29 03:08:26 2024 KST

@@ -1,0 +1,114 @@
+############################################################
+# Kite: Architecture Simulator for RISC-V Instruction Set  #
+# Developed by William J. Song                             #
+# Computer Architecture and Systems Lab, Yonsei University #
+# Version: 1.12                                            #
+############################################################
+
+# Kite program code
+#   1. The first instruction starts at PC = 4. PC = 0 is reserved as invalid.
+#   2. To terminate the program, let the next PC naturally go out of range.
+#   3. All the instructions and labels are case-insensitive.
+#   4. The program code supports only the following list of instructions
+#      (sorted by alphabetical order in each type).
+#      R-type: add, and, div, divu, mul, or, rem, remu, sll, sra, srl, sub, xor
+#      I-type: addi, andi, jalr, ld, slli, srai, srli, ori, xori
+#      S-type: sd
+#      SB-type: beq, bge, blt, bne
+#      U-type: lui
+#      UJ-type: jal
+#      No-type: nop
+
+main:
+addi    x2,     x2,     -16     # Set the stack pointer.
+sd      x8,     0(x2)           # Store the frame pointer.
+addi    x8,     x2,     16      # Set the frame pointer.
+sd      x1,     -8(x8)          # Store the return address.
+
+ld      x10,    0(x18)          # x10 = n
+add     x11,    x18,    x0      # x11 = A
+add     x12,    x20,    x0      # x12 = C
+add     x13,    x19,    x0      # x13 = B
+jal     x1,     TowerOfHanoi    # TowerOfHanoi(n, A, C, B)
+
+ld      x1,     -8(x8)          # Restore the return address.
+ld      x8,     0(x2)           # Restore the frame pointer.
+addi    x2,     x2,     16      # Restore the stack pointer.
+add     x10,    x0,     x0      # return 0 at the end of main
+jalr    x0,     0(x1)           # End of the program code
+
+
+###########################
+# Assignment 2: Functions #
+###########################
+
+##################################################################################
+# Assume we are changing the following c code to assembly                        #
+#                                                                                # 
+# void TowerOfHanoi(unsigned n, unsigned *from, unsigned *to, unsigned *aux)     #
+# {                                                                              #
+#    if(n == 0) return;                                                          #
+#   TowerOfHanoi(n-1, from, aux, to);                                            #
+#   to[++to[0]] = from[from[0]--];                                               #
+#   num_moves++;                                                                 #
+#   TowerOfHanoi(n-1, aux, to, from);                                            #
+# }                                                                              #
+##################################################################################
+
+# TowerOfHanoi START
+
+TowerOfHanoi:                              # store return address & 4parameters 
+	addi x2, x2, -40                   # adjust sp(x2) to make room for 5 items
+	sd x1, 32(x2)                      # save the x1 state (return address)
+	sd x10, 24(x2)                     # save the x10 state
+	sd x11, 16(x2)                     # save the x11 state
+	sd x12, 8(x2)                      # save the x12 state
+	sd x13, 0(x2)                      # save the x13 state
+	beq x10, x0, return                # Branch to return if n == 0
+
+# TowerOfHanoi(n-1, from, aux, to)
+
+	addi x10, x10, -1                  # x10 = x10 -1; n--
+	ld x11, 16(x2)                     # restore "from" from memory
+	ld x12, 0(x2)                      # restore "aux" from memory
+	ld x13, 8(x2)                      # restore "to" from memory  
+	jal x1, TowerOfHanoi               # go to TowerOfHanoi, return address x1;TowerOfHanoi(n-1, from, aux, to)
+
+# to[to[0]] = from[from[0]--]
+
+	ld x1, 32(x2)                      # restore return address from memory
+	ld x10, 24(x2)                     # restore "n" from memory
+	ld x11, 16(x2)                     # restore "from" from memory
+	ld x12, 8(x2)                      # restore "to" from memory
+	ld x13, 0(x2)                      # restore "aux" from memory
+	
+	ld x6, 0(x12)                      # original to[0] Load	
+	addi x6, x6, 1                     # to[0]++
+	sd x6, 0(x12)                      # save value of to[0]
+	ld x7, 0(x11)                      # load value of from[0]
+	
+	slli x5, x7, 3                     # x5 = from[0] * 8
+	add x28, x11, x5                   # x28 = x11 + x5 ; x28 = memory address of disk which we need to move
+	ld x29, 0(x28)                     # x29 : the disk size we will move (cf) size : 59, 43, 31, 23, 17
+	slli x5, x6, 3                     # x5 = to[0] * 8
+	add x30, x12, x5                   # x30 = x12 + x5 ; x30 = momery address which disk will stored
+	sd x29, 0(x30)                     # store value x29 = from[from[0]--] on memory address 0(x30)
+
+	addi x7, x7, -1                    # from[0]--
+	sd x7, 0(x11)                      # store from[0]
+
+	addi x9, x9, 1                     # num_moves ++	
+
+# TowerOfHanoi(n-1, aux, to, from)
+
+	addi x10, x10, -1                  # x10 = x10 -1; n--
+	ld x11, 0(x2)                      # restore "aux" from memory; 
+	ld x12, 8(x2)                      # restore "to" from memory; 
+   	ld x13, 16(x2)                     # restore "from" from memory; 
+	addi x2, x2, 40                    # Before going to TowerOfHanoi, clear the stack
+	jal x0, TowerOfHanoi               # go to TowerOfHanoi, return address x0; TowerOfHanoi(n-1, aux, to, from)
+                                           # we don't need to use jal x1, TowerOfHanoi because we don't need return address
+                                           # x0 is hard wired to 0
+return:
+	addi x2, x2, 40                    # Before going to return address, clear the stack
+	jalr x0, 0(x1)                     # return to the caller

@@ -1,0 +1,20 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "17:32:28 11/27/2024 "
+* "netlist" "FO1_delay.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in =   0.            
++ out =  41.0522n       
++ temp1 =   1.1000        
++ temp2 =  63.6673n       
++ temp3 =   1.1000        
++ vdd =   1.1000        
++ vss =   0.            
+***   END: Saved Operating Point ***                     

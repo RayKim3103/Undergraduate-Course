@@ -1,0 +1,50 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Test1
+* Top Cell Name: FO4_delay
+* View Name:     schematic
+* Netlisted on:  Nov 27 17:45:14 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+
+
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inverter in out vdd vss
+*.PININFO in:I out:O vdd:B vss:B
+MM0 out in vss vss nmos W=nw L=45n
+MM1 out in vdd vdd pmos W=pw L=45n
+.ENDS
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    FO4_delay
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT FO4_delay in out1 out2 out3 out4 vdd vss
+*.PININFO in:I out1:O out2:O out3:O out4:O vdd:B vss:B
+XI6 temp3 out1 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI5 temp3 out4 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI4 temp3 out2 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI3 temp3 out3 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI2 temp2 temp3 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI1 temp1 temp2 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+XI0 in temp1 vdd vss / inverter pw=1.86e-06 nw=1.2e-06
+.ENDS
+

@@ -1,0 +1,83 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "02:40:35 11/29/2024 "
+* "netlist" "nand16_select_repeater_1st.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in1 =   0.            
++ net014 =   1.1270u       
++ net015 =  63.5230n       
++ net017 = 101.2025n       
++ net018 =   1.1647u       
++ net019 =  63.5230n       
++ net020 =   1.1270u       
++ net021 =  63.5230n       
++ net031 =   1.1270u       
++ net033 =   1.1000        
++ net035 =   1.1000        
++ net036 =   1.0302u       
++ net039 =   1.1000        
++ net040 =   1.1000        
++ net042 =  61.5002n       
++ net198 =  55.7931n       
++ net199 =  55.7931n       
++ net200 =  55.7931n       
++ net201 =  55.7931n       
++ net202 =  55.7931n       
++ net203 =  55.7931n       
++ net204 =  55.7931n       
++ net205 =  55.7931n       
++ net206 =  55.7931n       
++ net207 =  55.7931n       
++ net208 =  55.7931n       
++ net209 =  55.7931n       
++ net210 =  55.7931n       
++ net211 =  55.7931n       
++ net212 =  55.7931n       
++ out = 473.6410n       
++ temp1 =   1.1000        
++ temp2 =  82.1660n       
++ temp3 =   1.1000        
++ temp4 =  82.0027n       
++ temp5 =   1.1000        
++ temp7 =   1.1000        
++ temp8 = 514.9738n       
++ temp9 =   1.1000        
++ vdd =   1.1000        
++ vss =   0.            
++ xi10.net54 = 340.3399n       
++ xi10.net55 = 432.8703n       
++ xi10.net56 = 196.0498n       
++ xi8.net54 = 360.9955n       
++ xi8.net55 = 463.8618n       
++ xi8.net56 = 206.3749n       
++ xi0.net54 = 229.5567n       
++ xi0.net55 = 266.7629n       
++ xi0.net56 = 140.6357n       
++ xi2.net7 =  37.2343n       
++ xi7.net7 =  37.2253n       
++ xi5.net7 =  37.2392n       
++ xi3.net7 =  37.2272n       
++ xi14.net4 =   1.1000        
++ xi15.net4 =   1.1000        
++ xi16.net4 =   1.1000        
++ xi9.net4 =   1.1000        
++ xi11.net4 =   1.1000        
++ xi12.net4 =   1.1000        
++ xi13.net4 =   1.1000        
++ xi24.net4 =   1.1000        
++ xi23.net4 =   1.1000        
++ xi22.net4 =   1.1000        
++ xi21.net4 =   1.1000        
++ xi20.net4 =   1.1000        
++ xi19.net4 =   1.1000        
++ xi18.net4 =   1.1000        
++ xi17.net4 =   1.1000        
++ xi6.net4 =   1.1000        
+***   END: Saved Operating Point ***                     

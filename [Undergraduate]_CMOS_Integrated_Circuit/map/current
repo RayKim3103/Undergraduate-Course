@@ -1,0 +1,32 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "nand16_select_repeater_2nd"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/2024_2_digital_15/cadence/minsung/"
+ )
+( instViewTable
+ )
+( net
+ )
+( inst
+ )
+( model
+( "2024_project_circuit/nand4/schematic" "nand4" )
+( "Test1/inverter/schematic" "inverter" )
+( "2024_project_circuit/nand16_select_repeater_2nd/schematic" "nand16_select_repeater_2nd" )
+( "2024_project_circuit/nand2/schematic" "nand2" )
+( "2024_project_circuit/nor2/schematic" "nor2" )
+ )
+( term
+ )
+( param
+ )
+( "inverter" "ihnl/cds3/map" )
+( "nand16_select_repeater_2nd" "ihnl/cds4/map" )
+( "nand4" "ihnl/cds1/map" )
+( "nor2" "ihnl/cds0/map" )
+( "nand2" "ihnl/cds2/map" )
+ )

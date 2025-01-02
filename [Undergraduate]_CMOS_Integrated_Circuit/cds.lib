@@ -1,0 +1,4 @@
+SOFTINCLUDE /opt/cadence/ic615/share/cdssetup/cds.lib
+DEFINE Test1 /home/2024_2_digital_15/cadence/minsung/Test1
+#Removed by ddDeleteObj: DEFINE mux_lib /home/2024_2_digital_15/cadence/minsung/mux_lib
+DEFINE 2024_project_circuit /home/2024_2_digital_15/cadence/minsung/2024_project_circuit

@@ -1,0 +1,63 @@
+############################################################
+# Kite: Architecture Simulator for RISC-V Instruction Set  #
+# Developed by William J. Song                             #
+# Computer Architecture and Systems Lab, Yonsei University #
+# Version: 1.12                                            #
+############################################################
+
+# x10 = &A[0] = 1024
+# x11 = &B[0] = 2016
+# x12 = &C[0] = 3008
+
+# x13 = M = 5
+# x14 = N = 8
+# x15 = K = 4
+
+MMUL_OS:                            # Output-stationary matrix multiplication
+    addi    x20,    x0,     0       # x20 = m
+LOOP_M:
+    bge     x20,    x13,    EXIT_M
+
+    addi    x21,    x0,     0       # x21 = n
+LOOP_N:
+    bge     x21,    x14,    EXIT_N
+
+    mul     x25,    x20,    x14
+    add     x25,    x25,    x21
+    slli    x25,    x25,    3
+    add     x25,    x12,    x25
+    ld      x28,    0(x25)          # Load C[m * N + n]
+    
+    addi    x22,    x0,     0       # x22 = k
+LOOP_K:
+    bge     x22,    x15,    EXIT_K
+
+    mul     x23,    x20,    x15
+    add     x23,    x23,    x22
+    slli    x23,    x23,    3
+    add     x23,    x10,    x23
+    ld      x26,    0(x23)          # Load A[m * K + k]
+    
+    mul     x24,    x22,    x14
+    add     x24,    x24,    x21
+    slli    x24,    x24,    3
+    add     x24,    x11,    x24
+    ld      x27,    0(x24)          # Load B[k * N + n]
+    
+    mul     x29,    x26,    x27
+    add     x28,    x28,    x29     # C[m * N + n] += A[m * K + k] * B[k * N + n]
+    
+    addi    x22,    x22,    1       # k++
+    jal     x0,     LOOP_K
+
+EXIT_K:
+    sd      x28,    0(x25)          # Store C[m * N + n]
+    addi    x21,    x21,    1       # n++
+    jal     x0,     LOOP_N
+
+EXIT_N:
+    addi    x20,    x20,    1       # m++
+    jal     x0,     LOOP_M
+
+EXIT_M:
+

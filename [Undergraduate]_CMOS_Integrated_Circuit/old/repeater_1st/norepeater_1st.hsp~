@@ -1,0 +1,47 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  2024_project_circuit
+* Top Cell Name: norepeater_1st
+* View Name:     schematic
+* Netlisted on:  Nov 28 12:27:33 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+
+
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inverter in out vdd vss
+*.PININFO in:I out:O vdd:B vss:B
+MM0 out in vss vss nmos W=nw L=45n
+MM1 out in vdd vdd pmos W=pw L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    norepeater_1st
+* View Name:    schematic
+************************************************************************
+
+*.PININFO in:I out:O vdd:B vss:B
+XI1 net17 net14 vdd vss / inverter pw=6.96e-06 nw=4.49e-06
+XI0 in net17 vdd vss / inverter pw=6.96e-06 nw=4.49e-06
+CC8 out vss 27.11f $[CP]
+CC3 out vss 40f $[CP]
+CC2 net14 vss 40f $[CP]
+RR1 net14 out 20K $[RP]
+

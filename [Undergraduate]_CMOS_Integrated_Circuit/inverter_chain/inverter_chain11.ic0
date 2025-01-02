@@ -1,0 +1,18 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "01:15:04 11/11/2024 "
+* "netlist" "inverter_chain11.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in =   0.            
++ out =  45.4150n       
++ temp =   1.1000        
++ vdd =   1.1000        
++ vss =   0.            
+***   END: Saved Operating Point ***                     

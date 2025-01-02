@@ -1,0 +1,69 @@
+***** HSPICE -- I-2013.12-SP1 64-BIT (Feb 25 2014) RHEL64 ******
+ Input File: repeater3_1st.sp
+ lic:
+ lic: FLEXlm: v10.9.8
+ lic: USER:   2024_2_digital_15    HOSTNAME: VLSI-SYSTEM-WORKSTATION3
+ lic: HOSTID: 002564f8ee34         PID:      25435
+ lic: Using FLEXlm license file:
+ lic: 27020@itsoc2
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 09-jul-2025/2023.12
+ lic: 8(in_use)/11(total) FLOATING license(s) on SERVER 27020@itsoc2
+ lic:
+ init: begin read circuit files,  cpu clock=  2.12E+01
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         ad
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         behave
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         bjt
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         burr_brn
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         comlinear
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         dio
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         fet
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         lin_tech
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         pci
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         signet
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         ti
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         tline
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         xilinx
+       option search = /opt/synopsys/hspice/I-2013.12-SP1/hspice/parts/
+                         ad
+       option runlvl
+       option post
+       option node
+       option list
+ init: end read circuit files,  cpu clock=  2.12E+01 peak memory=       168 mb
+ init: begin check errors,  cpu clock=  2.12E+01
+ init: end check errors,  cpu clock=  2.12E+01 peak memory=       168 mb
+ init: begin setup matrix, pivot=     0 cpu clock=  2.12E+01
+       establish matrix -- done,  cpu clock=  2.12E+01 peak memory=       168 mb
+       re-order matrix -- done,  cpu clock=  2.12E+01 peak memory=       169 mb
+ init: end setup matrix,  cpu clock=  2.12E+01 peak memory=       169 mb
+ dcop: begin dcop,  cpu clock=  2.12E+01
+ dcop: end dcop,  cpu clock=  2.12E+01 peak memory=       169 mb  tot_iter=       4
+ output: repeater3_1st.tr0
+ sweep: tran tran0    begin, stop_t=  1.00E-08 #sweeps=2001 cpu clock=  2.12E+01
+ tran: time= 1.0000E-09 tot_iter=      14 conv_iter=       7 cpu clock= 2.12E+01
+ tran: time= 2.0000E-09 tot_iter=     187 conv_iter=      65 cpu clock= 2.12E+01
+ tran: time= 3.0000E-09 tot_iter=     375 conv_iter=     128 cpu clock= 2.13E+01
+ tran: time= 4.0000E-09 tot_iter=     559 conv_iter=     189 cpu clock= 2.13E+01
+ tran: time= 5.0000E-09 tot_iter=     736 conv_iter=     248 cpu clock= 2.13E+01
+ tran: time= 6.0000E-09 tot_iter=     914 conv_iter=     308 cpu clock= 2.13E+01
+ tran: time= 7.0000E-09 tot_iter=    1098 conv_iter=     369 cpu clock= 2.13E+01
+ tran: time= 8.0000E-09 tot_iter=    1291 conv_iter=     432 cpu clock= 2.14E+01
+ tran: time= 9.0000E-09 tot_iter=    1475 conv_iter=     493 cpu clock= 2.14E+01
+ tran: time= 1.0000E-08 tot_iter=    1670 conv_iter=     556 cpu clock= 2.14E+01
+ sweep: tran tran0    end,  cpu clock=  2.14E+01 peak memory=       169 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

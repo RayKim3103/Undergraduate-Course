@@ -1,0 +1,69 @@
+# Kite program code
+#   1. The first instruction starts at PC = 4. PC = 0 is reserved as invalid.
+#   2. To terminate the program, let the next PC naturally go out of range.
+#   3. All the instructions and labels are case-insensitive.
+#   4. The program code supports only the following list of instructions
+#      (sorted by alphabetical order in each type).
+#      R-type: add, and, div, divu, mul, or, rem, remu, sll, sra, srl, sub, xor
+#      I-type: addi, andi, jalr, ld, slli, srai, srli, ori, xori
+#      S-type: sd
+#      SB-type: beq, bge, blt, bne
+#   U-type: lui
+#      UJ-type: jal
+#      No-type: nop
+
+#################################
+# Assignment 1: RISC-V Assembly #
+#################################
+
+#Matrix multiplication (Input stationary dataflow)
+#############################################################
+# Assume we are changing the following c++ code to assembly #
+# int m = 5; // row of A                                    #
+# int n = 8; // column of B                                 #
+# int k = 4; // column of A or row of B                     #
+#   // multiplication using input stationary dataflow       #
+#   for (int i = 0; i < m; i++) {                           # 
+#	for (int p = 0; p < k; p++) {                       #
+#     	  for (int j = 0; j < n; j++) {                     #
+#               // multipying and adding the indexes        #
+#               C[i][j] += A[i][p] * B[p][j];               #
+#           }                                               #
+#       }                                                   #
+#   }                                                       #
+#############################################################
+
+loop_m: beq x8, x13, exit_m     # for (int i = 0; i < m; i++)
+	add x3, x0, x0          # making p = 0
+	slli x5, x8, 3          # x5 = i*8
+	slli x18, x5, 2         # x18 = (i*8)*(k=4)                                -> change to slli
+	slli x17, x5, 3         # x17 = (i*8)*(N=8)                                -> change to slli
+	add x18, x18, x10       # x18 = x18 + x10, this is the address of A[i][0]
+	add x17, x17, x12       # x17 = X17 + x12, this is the address of C[i][0]
+	
+loop_k: beq x3, x15, exit_k     # for (int p = 0; p < k; p++)
+	add x4, x0, x0          # making j = 0
+	slli x6, x3, 3          # x6 = p*8
+	slli x16, x6, 3         # x16 = (p*8)*(N=8)                                -> change to slli
+	add x22, x18, x6        # x22 = x18 + x6, this is the address of A[i][p]
+	add x16, x16, x11       # x16 = x16 + x11, this is the address of B[p][0]
+	ld x21, 0(x22)          # x21 = A[i][p]
+	
+loop_n: beq x4, x14, exit_n     # for (int j = 0; j < n; j++)
+	slli x7, x4, 3          # x7 = j*8
+	add x23, x16, x7        # x23 = x16 + x7, this is the address of B[p][j]
+	add x24, x17, x7        # x24 = x17 + x7, this is the address of C[i][j]
+	ld x19, 0(x23)          # x19 = B[p][j]
+	ld x25, 0(x24)          # x25 = previous vlaue of c[i][j]
+	mul x20, x21, x19       # x20 = x21*x19, this is x20 = A[i][p] * B[p][j]
+	add x20, x20, x25       # x20 = x20 + x25, this is x20 = previous vlaue of c[i][j] + A[i][p] * B[p][j]	
+	addi x4, x4, 1          # x4 = x4 +1, this means j = j+1
+	sd x20, 0(x24)          # c[i][j] = x20 
+	beq x0, x0, loop_n      # go to loop_n
+	
+exit_n: addi x3, x3, 1          # x3 = x3 + 1, this means p = p+1
+	beq x0, x0, loop_k      # go to loop_k
+exit_k: addi x8, x8, 1          # x8 = x8 + 1, this means i = i+1
+	beq x0, x0, loop_m      # go to loop_m
+exit_m:                         # process end
+	

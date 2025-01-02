@@ -1,0 +1,52 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  2024_project_circuit
+* Top Cell Name: Buffer_to_Buffer
+* View Name:     schematic
+* Netlisted on:  Nov 25 22:23:04 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Test1
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inverter in out vdd vss
+*.PININFO in:I out:O vdd:B vss:B
+MM0 out in vss vss NM W=nw L=45n
+MM1 out in vdd vdd PM W=pw L=45n
+.ENDS
+
+************************************************************************
+* Library Name: 2024_project_circuit
+* Cell Name:    Buffer_to_Buffer
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Buffer_to_Buffer in out vdd vss
+*.PININFO in:I out:O vdd:B vss:B
+XI7 temp3 net09 vdd vss / inverter pw=5.07e-06 nw=2.54e-06
+XI6 net09 out vdd vss / inverter pw=5.07e-06 nw=2.54e-06
+XI5 net010 temp3 vdd vss / inverter pw=5.07e-06 nw=2.54e-06
+XI4 temp2 net010 vdd vss / inverter pw=5.07e-06 nw=2.54e-06
+XI3 temp1 net011 vdd vss / inverter pw=5.07e-06 nw=2.54e-06
+XI2 net011 temp2 vdd vss / inverter pw=5.07e-06 nw=2.54e-06
+XI1 net012 temp1 vdd vss / inverter pw=5.07e-06 nw=2.54e-06
+XI0 in net012 vdd vss / inverter pw=5.07e-06 nw=2.54e-06
+.ENDS
+
