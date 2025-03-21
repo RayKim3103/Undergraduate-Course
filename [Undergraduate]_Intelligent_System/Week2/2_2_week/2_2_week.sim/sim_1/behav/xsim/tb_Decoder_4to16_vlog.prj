@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../2_2_week.srcs/sources_1/new/Decoder_4to16.v" \
+"../../../../2_2_week.srcs/sources_1/new/Gate_74LS138.v" \
+"../../../../2_2_week.srcs/sim_1/new/tb_Decoder_4to16.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

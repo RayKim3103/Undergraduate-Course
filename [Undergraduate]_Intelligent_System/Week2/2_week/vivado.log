@@ -1,0 +1,967 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Mar 12 11:44:45 2025
+# Process ID: 26240
+# Current directory: C:/2025exp_accelerator/2_week
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21972 C:\2025exp_accelerator\2_week\2_week.xpr
+# Log file: C:/2025exp_accelerator/2_week/vivado.log
+# Journal file: C:/2025exp_accelerator/2_week\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/2025exp_accelerator/2_week/2_week.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/2025exp_accelerator/2_week/2_week.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1115.504 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Gate_74LS138
+Compiling module xil_defaultlib.Verilog_74LS138
+Compiling module xil_defaultlib.tb_74LS138
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_74LS138_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 63
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close [ open C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Shift_74LS138.v w ]
+add_files C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Shift_74LS138.v
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <Shfit_74LS138> not found while processing module instance <dut_Shift> [C:/2025exp_accelerator/2_week/tb_74LS138.v:24]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <Shfit_74LS138> not found while processing module instance <dut_Shift> [C:/2025exp_accelerator/2_week/tb_74LS138.v:24]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <Shfit_74LS138> not found while processing module instance <dut_Shift> [C:/2025exp_accelerator/2_week/tb_74LS138.v:24]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Shift_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Gate_74LS138
+Compiling module xil_defaultlib.Verilog_74LS138
+Compiling module xil_defaultlib.Shift_74LS138
+Compiling module xil_defaultlib.tb_74LS138
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_74LS138_behav
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim/xsim.dir/tb_74LS138_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Mar 12 19:12:54 2025...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1115.504 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 72
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close [ open C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_1_to_8.v w ]
+add_files C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_1_to_8.v
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_1_to_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_1_to_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Shift_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Gate_74LS138
+Compiling module xil_defaultlib.Verilog_74LS138
+Compiling module xil_defaultlib.Shift_74LS138
+Compiling module xil_defaultlib.Gate_1_to_8
+Compiling module xil_defaultlib.tb_74LS138
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_74LS138_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 80
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 80
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_1_to_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_1_to_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Shift_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Gate_74LS138
+Compiling module xil_defaultlib.Verilog_74LS138
+Compiling module xil_defaultlib.Shift_74LS138
+Compiling module xil_defaultlib.Gate_1_to_8
+Compiling module xil_defaultlib.tb_74LS138
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_74LS138_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 80
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close [ open C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_1_to_8.v w ]
+add_files C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_1_to_8.v
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 80
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_1_to_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_1_to_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Shift_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_1_to_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_1_to_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+WARNING: [VRFC 10-3248] data object 'Verilog_Y' is already declared [C:/2025exp_accelerator/2_week/tb_74LS138.v:8]
+WARNING: [VRFC 10-3703] second declaration of 'Verilog_Y' ignored [C:/2025exp_accelerator/2_week/tb_74LS138.v:8]
+INFO: [VRFC 10-2458] undeclared symbol Verilog_1_8_Y, assumed default net type wire [C:/2025exp_accelerator/2_week/tb_74LS138.v:42]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'Y' [C:/2025exp_accelerator/2_week/tb_74LS138.v:42]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Gate_74LS138
+Compiling module xil_defaultlib.Verilog_74LS138
+Compiling module xil_defaultlib.Shift_74LS138
+Compiling module xil_defaultlib.Gate_1_to_8
+Compiling module xil_defaultlib.Verilog_1_to_8
+Compiling module xil_defaultlib.tb_74LS138
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_74LS138_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 87
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_1_to_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_1_to_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Shift_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_1_to_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_1_to_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+INFO: [VRFC 10-2458] undeclared symbol Verilog_1_8_Y, assumed default net type wire [C:/2025exp_accelerator/2_week/tb_74LS138.v:42]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'Y' [C:/2025exp_accelerator/2_week/tb_74LS138.v:42]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Gate_74LS138
+Compiling module xil_defaultlib.Verilog_74LS138
+Compiling module xil_defaultlib.Shift_74LS138
+Compiling module xil_defaultlib.Gate_1_to_8
+Compiling module xil_defaultlib.Verilog_1_to_8
+Compiling module xil_defaultlib.tb_74LS138
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_74LS138_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 87
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_1_to_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_1_to_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Gate_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Gate_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Shift_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_1_to_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_1_to_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Verilog_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Verilog_74LS138
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/2_week/tb_74LS138.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_74LS138
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Gate_74LS138
+Compiling module xil_defaultlib.Verilog_74LS138
+Compiling module xil_defaultlib.Shift_74LS138
+Compiling module xil_defaultlib.Gate_1_to_8
+Compiling module xil_defaultlib.Verilog_1_to_8
+Compiling module xil_defaultlib.tb_74LS138
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_74LS138_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 87
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1115.504 ; gain = 0.000
+close [ open C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4_to_16.v w ]
+add_files C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4_to_16.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4_to_16.v] -no_script -reset -force -quiet
+remove_files  C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4_to_16.v
+file delete -force C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4_to_16.v
+close [ open C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4to16.v w ]
+add_files C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4to16.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4to16.v] -no_script -reset -force -quiet
+remove_files  C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4to16.v
+file delete -force C:/2025exp_accelerator/2_week/2_week.srcs/sources_1/new/Decoder_4to16.v
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_74LS138'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_74LS138' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_74LS138_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+"xelab -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto bbeffbbd705c40699b2288ef42bb6acb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_74LS138_behav xil_defaultlib.tb_74LS138 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/2_week/2_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_74LS138_behav -key {Behavioral:sim_1:Functional:tb_74LS138} -tclbatch {tb_74LS138.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_74LS138.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+/--------------------------------/
+Hello EEE3551
+Start Simulation for 74LS138 Decoder/Demux
+/--------------------------------/
+                   0 Change of I/O Signal : G2A = 1 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  20 Change of I/O Signal : G2A = 0 G2B = 1 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  30 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 0 C = 1 B = 1 A = 1 | Gate_Y = 11111111 Verilog_Y = 11111111
+                  40 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 0 | Gate_Y = 11111110 Verilog_Y = 11111110
+                  50 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 0 | Gate_Y = 11111101 Verilog_Y = 11111101
+                  60 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 0 | Gate_Y = 11111011 Verilog_Y = 11111011
+                  70 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 0 | Gate_Y = 11110111 Verilog_Y = 11110111
+                  80 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 0 A = 1 | Gate_Y = 11101111 Verilog_Y = 11101111
+                  90 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 0 A = 1 | Gate_Y = 11011111 Verilog_Y = 11011111
+                 100 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 0 B = 1 A = 1 | Gate_Y = 10111111 Verilog_Y = 10111111
+                 110 Change of I/O Signal : G2A = 0 G2B = 0 G1 = 1 C = 1 B = 1 A = 1 | Gate_Y = 01111111 Verilog_Y = 01111111
+/--------------------------------/
+This is the end of simulation
+Good Luck
+/--------------------------------/
+$finish called at time : 210 ns : File "C:/2025exp_accelerator/2_week/tb_74LS138.v" Line 87
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_74LS138_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1115.504 ; gain = 0.000
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 12 21:28:10 2025...
