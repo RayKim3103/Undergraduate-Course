@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Mar 21 14:31:52 2025
+# Process ID: 30864
+# Current directory: C:/2025exp_accelerator/3_1_week/3_1_week.runs/impl_1
+# Command line: vivado.exe -log top_counter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_counter.tcl -notrace
+# Log file: C:/2025exp_accelerator/3_1_week/3_1_week.runs/impl_1/top_counter.vdi
+# Journal file: C:/2025exp_accelerator/3_1_week/3_1_week.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top_counter.tcl -notrace

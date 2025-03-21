@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Mar 18 20:15:09 2025
+# Process ID: 25568
+# Current directory: C:/2025exp_accelerator/3_2_week
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8568 C:\2025exp_accelerator\3_2_week\3_2_week.xpr
+# Log file: C:/2025exp_accelerator/3_2_week/vivado.log
+# Journal file: C:/2025exp_accelerator/3_2_week\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/2025exp_accelerator/3_2_week/3_2_week.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source tb_fsm_counter_top.tcl
+close_sim
+launch_simulation
+source tb_fsm_counter_top.tcl
+close_sim
+launch_simulation
+source tb_fsm_counter_top.tcl
+close_sim
+launch_simulation
+source tb_fsm_counter_top.tcl
+close_sim
+launch_simulation
+source tb_fsm_counter_top.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_sim

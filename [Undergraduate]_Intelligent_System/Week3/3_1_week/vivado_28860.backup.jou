@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Mar 20 15:28:24 2025
+# Process ID: 28860
+# Current directory: C:/2025exp_accelerator/3_1_week
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17772 C:\2025exp_accelerator\3_1_week\3_1_week.xpr
+# Log file: C:/2025exp_accelerator/3_1_week/vivado.log
+# Journal file: C:/2025exp_accelerator/3_1_week\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/2025exp_accelerator/3_1_week/3_1_week.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top_counter [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

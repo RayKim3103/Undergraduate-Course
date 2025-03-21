@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../3_1_week.srcs/sources_1/new/clk_divider.v" \
+"../../../../3_1_week.srcs/sources_1/new/clk_divider_2.v" \
+"../../../../3_1_week.srcs/sources_1/new/d_ff.v" \
+"../../../../3_1_week.srcs/sources_1/new/debouncer.v" \
+"../../../../3_1_week.srcs/sources_1/new/debouncer_2.v" \
+"../../../../3_1_week.srcs/sources_1/new/debouncer_active_low.v" \
+"../../../../3_1_week.srcs/sources_1/new/top_counter.v" \
+"../../../../3_1_week.srcs/sim_1/new/tb_top_counter.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

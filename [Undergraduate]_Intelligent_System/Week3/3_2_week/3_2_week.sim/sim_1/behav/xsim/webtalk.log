@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Mar 20 17:26:56 2025
+# Process ID: 25536
+# Current directory: C:/2025exp_accelerator/3_2_week/3_2_week.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/2025exp_accelerator/3_2_week/3_2_week.sim/sim_1/behav/xsim/xsim.dir/tb_fsm_counter_top_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/2025exp_accelerator/3_2_week/3_2_week.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/2025exp_accelerator/3_2_week/3_2_week.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/2025exp_accelerator/3_2_week/3_2_week.sim/sim_1/behav/xsim/xsim.dir/tb_fsm_counter_top_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 20 17:26:58 2025...

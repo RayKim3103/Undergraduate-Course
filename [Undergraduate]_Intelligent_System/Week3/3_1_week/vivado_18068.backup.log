@@ -1,0 +1,291 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Mar 20 10:24:45 2025
+# Process ID: 18068
+# Current directory: C:/2025exp_accelerator/3_1_week
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent736 C:\2025exp_accelerator\3_1_week\3_1_week.xpr
+# Log file: C:/2025exp_accelerator/3_1_week/vivado.log
+# Journal file: C:/2025exp_accelerator/3_1_week\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/2025exp_accelerator/3_1_week/3_1_week.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/2025exp_accelerator/3_1_week/3_1_week.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:01:05 ; elapsed = 00:00:31 . Memory (MB): peak = 1100.996 ; gain = 0.000
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\2025exp_accelerator\3_1_week\3_1_week.srcs\sources_1\new\debouncer.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\2025exp_accelerator\3_1_week\3_1_week.srcs\sources_1\new\clk_divider.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\2025exp_accelerator\3_1_week\3_1_week.srcs\sources_1\new\top_counter.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Mar 20 10:46:24 2025] Launched synth_1...
+Run output will be captured here: C:/2025exp_accelerator/3_1_week/3_1_week.runs/synth_1/runme.log
+[Thu Mar 20 10:46:24 2025] Launched impl_1...
+Run output will be captured here: C:/2025exp_accelerator/3_1_week/3_1_week.runs/impl_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top_counter'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top_counter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_counter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sources_1/new/clk_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sources_1/new/debouncer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sources_1/new/top_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sim_1/new/tb_top_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_counter
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim'
+"xelab -wto 21fdc3ed2a184815b08722202adcf632 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_counter_behav xil_defaultlib.tb_top_counter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 21fdc3ed2a184815b08722202adcf632 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_counter_behav xil_defaultlib.tb_top_counter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'count' on this module [C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sim_1/new/tb_top_counter.v:56]
+ERROR: [VRFC 10-3180] cannot find port 'clk_50hz' on this module [C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sim_1/new/tb_top_counter.v:55]
+ERROR: [VRFC 10-3180] cannot find port 'in_down_clean' on this module [C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sim_1/new/tb_top_counter.v:54]
+ERROR: [VRFC 10-3180] cannot find port 'in_up_clean' on this module [C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sim_1/new/tb_top_counter.v:53]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top_counter'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top_counter' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_counter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sources_1/new/clk_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sources_1/new/debouncer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sources_1/new/top_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_1_week/3_1_week.srcs/sim_1/new/tb_top_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_counter
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim'
+"xelab -wto 21fdc3ed2a184815b08722202adcf632 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_counter_behav xil_defaultlib.tb_top_counter xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 21fdc3ed2a184815b08722202adcf632 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_counter_behav xil_defaultlib.tb_top_counter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clk_divider
+Compiling module xil_defaultlib.debouncer
+Compiling module xil_defaultlib.top_counter
+Compiling module xil_defaultlib.tb_top_counter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_counter_behav
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim/xsim.dir/tb_top_counter_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 20 14:46:57 2025...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1100.996 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/2025exp_accelerator/3_1_week/3_1_week.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_counter_behav -key {Behavioral:sim_1:Functional:tb_top_counter} -tclbatch {tb_top_counter.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top_counter.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 5000ns
+Time =                    0 | Reset = 1 | Count = xxxx | SSD = xxxxxxx | cat = x
+Time =               200000 | Reset = 0 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =               320000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =               355000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =               395000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =               435000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =               455000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =               475000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =               515000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =               555000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =               595000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =               635000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =               675000 | Reset = 1 | Count = 0010 | SSD = 1111110 | cat = 1
+Time =               715000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =               755000 | Reset = 1 | Count = 0010 | SSD = 1111110 | cat = 1
+Time =               795000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =               835000 | Reset = 1 | Count = 0010 | SSD = 1111110 | cat = 1
+Time =               875000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =               895000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =               915000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =               955000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =               995000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =              1035000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =              1075000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =              1115000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              1155000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              1195000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              1235000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              1275000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              1315000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =              1355000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =              1395000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =              1435000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =              1475000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =              1515000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =              1555000 | Reset = 1 | Count = 0010 | SSD = 1111110 | cat = 1
+Time =              1595000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =              1635000 | Reset = 1 | Count = 0010 | SSD = 1111110 | cat = 1
+Time =              1675000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =              1715000 | Reset = 1 | Count = 0011 | SSD = 1111110 | cat = 1
+Time =              1755000 | Reset = 1 | Count = 0011 | SSD = 1111001 | cat = 0
+Time =              1795000 | Reset = 1 | Count = 0011 | SSD = 1111110 | cat = 1
+Time =              1835000 | Reset = 1 | Count = 0011 | SSD = 1111001 | cat = 0
+Time =              1875000 | Reset = 1 | Count = 0011 | SSD = 1111110 | cat = 1
+Time =              1915000 | Reset = 1 | Count = 0100 | SSD = 0110011 | cat = 0
+Time =              1955000 | Reset = 1 | Count = 0100 | SSD = 1111110 | cat = 1
+Time =              1995000 | Reset = 1 | Count = 0100 | SSD = 0110011 | cat = 0
+Time =              2035000 | Reset = 1 | Count = 0100 | SSD = 1111110 | cat = 1
+Time =              2075000 | Reset = 1 | Count = 0100 | SSD = 0110011 | cat = 0
+Time =              2115000 | Reset = 1 | Count = 0101 | SSD = 1111110 | cat = 1
+Time =              2155000 | Reset = 1 | Count = 0101 | SSD = 1011011 | cat = 0
+Time =              2195000 | Reset = 1 | Count = 0101 | SSD = 1111110 | cat = 1
+Time =              2235000 | Reset = 1 | Count = 0101 | SSD = 1011011 | cat = 0
+Time =              2275000 | Reset = 1 | Count = 0101 | SSD = 1111110 | cat = 1
+Time =              2315000 | Reset = 1 | Count = 0110 | SSD = 1011111 | cat = 0
+Time =              2355000 | Reset = 1 | Count = 0110 | SSD = 1111110 | cat = 1
+Time =              2395000 | Reset = 1 | Count = 0110 | SSD = 1011111 | cat = 0
+Time =              2435000 | Reset = 1 | Count = 0110 | SSD = 1111110 | cat = 1
+Time =              2475000 | Reset = 1 | Count = 0110 | SSD = 1011111 | cat = 0
+Time =              2515000 | Reset = 1 | Count = 0111 | SSD = 1111110 | cat = 1
+Time =              2555000 | Reset = 1 | Count = 0111 | SSD = 1110000 | cat = 0
+Time =              2595000 | Reset = 1 | Count = 0111 | SSD = 1111110 | cat = 1
+Time =              2635000 | Reset = 1 | Count = 0111 | SSD = 1110000 | cat = 0
+Time =              2675000 | Reset = 1 | Count = 0111 | SSD = 1111110 | cat = 1
+Time =              2715000 | Reset = 1 | Count = 1000 | SSD = 1111111 | cat = 0
+Time =              2755000 | Reset = 1 | Count = 1000 | SSD = 1111110 | cat = 1
+Time =              2795000 | Reset = 1 | Count = 1000 | SSD = 1111111 | cat = 0
+Time =              2835000 | Reset = 1 | Count = 1000 | SSD = 1111110 | cat = 1
+Time =              2875000 | Reset = 1 | Count = 1000 | SSD = 1111111 | cat = 0
+Time =              2915000 | Reset = 1 | Count = 0111 | SSD = 1111110 | cat = 1
+Time =              2955000 | Reset = 1 | Count = 0111 | SSD = 1110000 | cat = 0
+Time =              2995000 | Reset = 1 | Count = 0111 | SSD = 1111110 | cat = 1
+Time =              3035000 | Reset = 1 | Count = 0111 | SSD = 1110000 | cat = 0
+Time =              3075000 | Reset = 1 | Count = 0111 | SSD = 1111110 | cat = 1
+Time =              3115000 | Reset = 1 | Count = 0110 | SSD = 1011111 | cat = 0
+Time =              3155000 | Reset = 1 | Count = 0110 | SSD = 1111110 | cat = 1
+Time =              3195000 | Reset = 1 | Count = 0110 | SSD = 1011111 | cat = 0
+Time =              3235000 | Reset = 1 | Count = 0110 | SSD = 1111110 | cat = 1
+Time =              3275000 | Reset = 1 | Count = 0110 | SSD = 1011111 | cat = 0
+Time =              3315000 | Reset = 1 | Count = 0101 | SSD = 1111110 | cat = 1
+Time =              3355000 | Reset = 1 | Count = 0101 | SSD = 1011011 | cat = 0
+Time =              3395000 | Reset = 1 | Count = 0101 | SSD = 1111110 | cat = 1
+Time =              3435000 | Reset = 1 | Count = 0101 | SSD = 1011011 | cat = 0
+Time =              3475000 | Reset = 1 | Count = 0101 | SSD = 1111110 | cat = 1
+Time =              3515000 | Reset = 1 | Count = 0100 | SSD = 0110011 | cat = 0
+Time =              3555000 | Reset = 1 | Count = 0100 | SSD = 1111110 | cat = 1
+Time =              3595000 | Reset = 1 | Count = 0100 | SSD = 0110011 | cat = 0
+Time =              3635000 | Reset = 1 | Count = 0100 | SSD = 1111110 | cat = 1
+Time =              3675000 | Reset = 1 | Count = 0100 | SSD = 0110011 | cat = 0
+Time =              3715000 | Reset = 1 | Count = 0011 | SSD = 1111110 | cat = 1
+Time =              3755000 | Reset = 1 | Count = 0011 | SSD = 1111001 | cat = 0
+Time =              3795000 | Reset = 1 | Count = 0011 | SSD = 1111110 | cat = 1
+Time =              3835000 | Reset = 1 | Count = 0011 | SSD = 1111001 | cat = 0
+Time =              3875000 | Reset = 1 | Count = 0011 | SSD = 1111110 | cat = 1
+Time =              3915000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =              3955000 | Reset = 1 | Count = 0010 | SSD = 1111110 | cat = 1
+Time =              3995000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =              4035000 | Reset = 1 | Count = 0010 | SSD = 1111110 | cat = 1
+Time =              4075000 | Reset = 1 | Count = 0010 | SSD = 1101101 | cat = 0
+Time =              4115000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =              4155000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =              4195000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =              4235000 | Reset = 1 | Count = 0001 | SSD = 0110000 | cat = 0
+Time =              4275000 | Reset = 1 | Count = 0001 | SSD = 1111110 | cat = 1
+Time =              4315000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4355000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              4395000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4435000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              4475000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4515000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              4555000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4595000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              4635000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4675000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              4715000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4755000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              4795000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4835000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              4875000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4915000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+Time =              4955000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 0
+Time =              4995000 | Reset = 1 | Count = 0000 | SSD = 1111110 | cat = 1
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_counter_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 5000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1100.996 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/2025exp_accelerator/3_1_week/3_1_week.runs/synth_1
+
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Mar 20 15:05:40 2025] Launched synth_1...
+Run output will be captured here: C:/2025exp_accelerator/3_1_week/3_1_week.runs/synth_1/runme.log
+[Thu Mar 20 15:05:40 2025] Launched impl_1...
+Run output will be captured here: C:/2025exp_accelerator/3_1_week/3_1_week.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Mar 20 15:05:58 2025] Launched synth_1...
+Run output will be captured here: C:/2025exp_accelerator/3_1_week/3_1_week.runs/synth_1/runme.log
+[Thu Mar 20 15:05:58 2025] Launched impl_1...
+Run output will be captured here: C:/2025exp_accelerator/3_1_week/3_1_week.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Mar 20 15:08:52 2025] Launched impl_1...
+Run output will be captured here: C:/2025exp_accelerator/3_1_week/3_1_week.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 15:28:19 2025...

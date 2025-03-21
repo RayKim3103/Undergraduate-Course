@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Mar 20 01:24:00 2025
+# Process ID: 37608
+# Current directory: C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.runs/synth_1
+# Command line: vivado.exe -log fsm_counter_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fsm_counter_top.tcl
+# Log file: C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.runs/synth_1/fsm_counter_top.vds
+# Journal file: C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source fsm_counter_top.tcl -notrace

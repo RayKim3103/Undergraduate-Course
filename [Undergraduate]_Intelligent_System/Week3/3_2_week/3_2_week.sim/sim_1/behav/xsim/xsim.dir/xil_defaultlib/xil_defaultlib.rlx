@@ -1,0 +1,10 @@
+0.7
+2020.2
+Jun 10 2021
+20:04:57
+C:/2025exp_accelerator/3_2_week/3_2_week.sim/sim_1/behav/xsim/glbl.v,1623370582,verilog,,,,glbl,,,,,,,,
+C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sim_1/new/tb_fsm_counter_top.v,1742459738,verilog,,,,tb_fsm_counter_top,,,,,,,,
+C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sources_1/new/clk_divider.v,1742459157,verilog,,C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sources_1/new/fsm_counter_top.v,,clk_divider,,,,,,,,
+C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sources_1/new/fsm_counter_top.v,1742459804,verilog,,C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sources_1/new/fsm_ctrl.v,,fsm_counter_top,,,,,,,,
+C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sources_1/new/fsm_ctrl.v,1742458239,verilog,,C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sources_1/new/ssd_ctrl.v,,fsm_ctrl,,,,,,,,
+C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sources_1/new/ssd_ctrl.v,1742348218,verilog,,C:/2025exp_accelerator/3_2_week/3_2_week.srcs/sim_1/new/tb_fsm_counter_top.v,,ssd_ctrl,,,,,,,,

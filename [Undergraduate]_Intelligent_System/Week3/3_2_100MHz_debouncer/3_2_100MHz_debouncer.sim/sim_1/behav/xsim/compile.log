@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.srcs/sources_1/new/clk_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.srcs/sources_1/new/debouncer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.srcs/sources_1/new/debouncer_active_low.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncer_active_low
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.srcs/sources_1/new/fsm_counter_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_counter_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.srcs/sources_1/new/fsm_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.srcs/sources_1/new/ssd_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ssd_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/2025exp_accelerator/3_2_100MHz_debouncer/3_2_100MHz_debouncer.srcs/sim_1/new/tb_fsm_counter_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fsm_counter_top

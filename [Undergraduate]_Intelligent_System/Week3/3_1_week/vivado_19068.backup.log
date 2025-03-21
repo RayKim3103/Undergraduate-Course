@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Mar 20 10:18:12 2025
+# Process ID: 19068
+# Current directory: C:/2025exp_accelerator/3_1_week
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25756 C:\2025exp_accelerator\3_1_week\3_1_week.xpr
+# Log file: C:/2025exp_accelerator/3_1_week/vivado.log
+# Journal file: C:/2025exp_accelerator/3_1_week\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/2025exp_accelerator/3_1_week/3_1_week.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/2025exp_accelerator/3_1_week/3_1_week.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:01:43 ; elapsed = 00:00:52 . Memory (MB): peak = 1115.590 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 10:24:37 2025...
