@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Mar 11 16:13:26 2025
+# Process ID: 32364
+# Current directory: C:/2025exp_accelerator/2_week
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19348 C:\2025exp_accelerator\2_week\2_week.xpr
+# Log file: C:/2025exp_accelerator/2_week/vivado.log
+# Journal file: C:/2025exp_accelerator/2_week\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/2025exp_accelerator/2_week/2_week.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_74LS138.tcl
+close_sim
