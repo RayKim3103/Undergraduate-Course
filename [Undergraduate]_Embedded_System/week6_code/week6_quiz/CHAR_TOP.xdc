@@ -1,0 +1,56 @@
+set_property IOSTANDARD "LVCMOS33" [get_ports "SYSTEM_CLOCK"]
+set_property PACKAGE_PIN "M19" [get_ports "SYSTEM_CLOCK"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "nSYSPOR"]
+set_property PACKAGE_PIN "Y18" [get_ports "nSYSPOR"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "SW[*]"]
+set_property PACKAGE_PIN "Y20" [get_ports "SW[0]"]
+set_property PACKAGE_PIN "Y21" [get_ports "SW[1]"]
+set_property PACKAGE_PIN "AB19" [get_ports "SW[2]"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "LED[*]"]
+set_property PACKAGE_PIN "T16" [get_ports "LED[0]"]
+set_property PACKAGE_PIN "T17" [get_ports "LED[1]"]
+set_property PACKAGE_PIN "R19" [get_ports "LED[2]"]
+set_property PACKAGE_PIN "T19" [get_ports "LED[3]"]
+set_property PACKAGE_PIN "R18" [get_ports "LED[4]"]
+set_property PACKAGE_PIN "T18" [get_ports "LED[5]"]
+set_property PACKAGE_PIN "P16" [get_ports "LED[6]"]
+set_property PACKAGE_PIN "R16" [get_ports "LED[7]"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "VGA_HSYNCH"]
+set_property PACKAGE_PIN "N17" [get_ports "VGA_HSYNCH"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "VGA_VSYNCH"]
+set_property PACKAGE_PIN "M17" [get_ports "VGA_VSYNCH"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "LCD_R[*]"]
+set_property PACKAGE_PIN "T22" [get_ports "LCD_R[7]"]
+set_property PACKAGE_PIN "U21" [get_ports "LCD_R[6]"]
+set_property PACKAGE_PIN "T21" [get_ports "LCD_R[5]"]
+set_property PACKAGE_PIN "K20" [get_ports "LCD_R[4]"]
+set_property PACKAGE_PIN "K19" [get_ports "LCD_R[3]"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "LCD_G[*]"]
+set_property PACKAGE_PIN "L22" [get_ports "LCD_G[7]"]
+set_property PACKAGE_PIN "L21" [get_ports "LCD_G[6]"]
+set_property PACKAGE_PIN "K21" [get_ports "LCD_G[5]"]
+set_property PACKAGE_PIN "J20" [get_ports "LCD_G[4]"]
+set_property PACKAGE_PIN "J22" [get_ports "LCD_G[3]"]
+set_property PACKAGE_PIN "J21" [get_ports "LCD_G[2]"]
+set_property IOSTANDARD "LVCMOS33" [get_ports "LCD_B[*]"]
+set_property PACKAGE_PIN "K18" [get_ports "LCD_B[7]"]
+set_property PACKAGE_PIN "J18" [get_ports "LCD_B[6]"]
+set_property PACKAGE_PIN "M16" [get_ports "LCD_B[5]"]
+set_property PACKAGE_PIN "M15" [get_ports "LCD_B[4]"]
+set_property PACKAGE_PIN "N18" [get_ports "LCD_B[3]"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "VGA_CLK"]
+set_property PACKAGE_PIN "L17" [get_ports "VGA_CLK"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "VGA_EN"]
+set_property PACKAGE_PIN "U22" [get_ports "VGA_EN"]
+
+set_property IOSTANDARD "LVCMOS33" [get_ports "lcd_blk_on"]
+set_property PACKAGE_PIN "W22" [get_ports "lcd_blk_on"]
