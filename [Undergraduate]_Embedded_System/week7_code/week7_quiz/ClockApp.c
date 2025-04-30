@@ -128,15 +128,15 @@ int main(void)
 	 */
     while (1) {
     	Status = ReadRTC();
-    	// segdata = ((RecvBuffer[2] & 0x3f)<<24) + (0xA << 20) + ((RecvBuffer[1] & 0x7f)<<12) + (0xA << 8) + (RecvBuffer[0] & 0x7f);
-
-		///////////////////////////////////////
+		/********** Original code **********/
+//    	segdata = ((RecvBuffer[2] & 0x3f)<<24) + (0xA << 20) + ((RecvBuffer[1] & 0x7f)<<12) + (0xA << 8) + (RecvBuffer[0] & 0x7f);
+		/***********************************/
+		/********** Quiz code **********/
 		if(RecvBuffer[0] % 2 == 0)
-			segdata = 0x20142087;
+		segdata = 0x20142087;
 		else
-			segdata = 0x20142186;
-		///////////////////////////////////////
-		
+		segdata = 0x20142186;
+		/******************************/
     	SEVENSEG_mWriteReg (XPAR_SEVENSEG_0_S00_AXI_BASEADDR, 0, segdata);
     	for (wait=0;wait<3000;wait++);
     }
