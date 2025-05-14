@@ -1,0 +1,156 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+//#include <stdio.h>
+//#include "platform.h"
+#include "xil_printf.h"
+
+
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xil_io.h"
+#include "hex.h"
+#include "image0.h"
+#include "image1.h"
+//
+#define XPAR_M_AHB_BASEADDR 0x43C00000 // Check your address at “Address Editor”
+#define XPAR_M_AHB_HIGHADDR 0x43C0FFFF // Check your address at “Address Editor”
+#define XPAR_M_AHB_1_BASEADDR 0x83C00000 // Check your address at “Address Editor”
+#define XPAR_M_AHB_1_HIGHADDR 0x83C0FFFF // Check your address at “Address Editor”
+int main()
+{
+    int x;
+    int y;
+    init_platform();
+    print("Hello World\n\r");
+
+    Xil_Out32(XPAR_M_AHB_1_BASEADDR, 0x01);
+    // Xil_Out32(XPAR_M_AHB_1_BASEADDR, 0x00);
+    // Xil_Out32(XPAR_M_AHB_1_BASEADDR+0X04, 0x01);
+    Xil_Out32(XPAR_M_AHB_1_BASEADDR+0X04, 0x00);
+    while (1)
+    {
+        // 1. color bar image
+        Xil_Out32(XPAR_M_AHB_1_BASEADDR, 0x00);
+        for(y=0;y<0x10000000;y++);
+
+        // 2. Stripes image: Alternate output of jet image and village image & reverse the image
+        Xil_Out32(XPAR_M_AHB_1_BASEADDR+0X04, 0x01);
+        Xil_Out32(XPAR_M_AHB_1_BASEADDR, 0x01);
+        for(x=0;x<240;x++) // 272
+        {
+            int count = 0;
+            for(y=0;y<272;y++){
+                if(y%34 == 0){
+                    count++;
+                }
+
+                if(count%2 == 0) {
+                    Xil_Out32(XPAR_M_AHB_BASEADDR+y*960+x*4, hex[x*2 + 1 + y*480]<<16 | hex[x*2 + y*480]);
+                }
+                else if(count%2 == 1) {
+                    Xil_Out32(XPAR_M_AHB_BASEADDR+y*960+x*4, image0[x*2 + 1 + y*480]<<16 | image0[x*2 + y*480]);
+                }
+            }
+
+        }
+        for(y=0;y<0x10000000;y++);
+
+        // 3. image Trim: Output left of a person image & forward direction
+        Xil_Out32(XPAR_M_AHB_1_BASEADDR+0X04, 0x00);
+        for(y=0;y<272;y++)
+        {
+            for(x=0;x<120;x++)
+            {
+                Xil_Out32(XPAR_M_AHB_BASEADDR+y*960+x*4, image1[x*2 + 1 + y*480]<<16 | image1[x*2 + y*480]);
+            }
+            for(x=120;x<240;x++)
+            {
+                Xil_Out32(XPAR_M_AHB_BASEADDR+y*960+x*4, 0x00000000);
+            }
+
+        }
+        for(y=0;y<0x10000000;y++);
+
+        // 4. image Trim: Output right of a person image & forward direction
+        for(y=0;y<272;y++)
+        {
+            for(x=0;x<120;x++)
+            {
+                Xil_Out32(XPAR_M_AHB_BASEADDR+y*960+x*4, 0x00000000);
+            }
+            for(x=120;x<240;x++)
+            {
+                Xil_Out32(XPAR_M_AHB_BASEADDR+y*960+x*4, image1[x*2 + 1 + y*480]<<16 | image1[x*2 + y*480]);
+            }
+        }
+        for(y=0;y<0x10000000;y++);
+
+        // 5. RGB Inversion: Output person image with RGB inverted & forward direction
+        for(y=0;y<272;y++)
+        {
+            for(x=0;x<240;x++)
+            {
+                Xil_Out32(XPAR_M_AHB_BASEADDR+y*960+x*4, 0xffffffff - (image1[x*2 + 1 + y*480]<<16 | image1[x*2 + y*480]));
+            }
+        }
+        for(y=0;y<0x10000000;y++);
+    }
+
+    return 0;
+}
+
+
+//int main()
+//{
+//    init_platform();
+//
+//    print("Hello World\n\r");
+//
+//    cleanup_platform();
+//    return 0;
+//}
