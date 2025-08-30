@@ -5,7 +5,7 @@ This README summarizes the content of the User Manual for the ISL NPU Project #2
 ## Project Information
 - **Project Name**: FPGA를 이용한 MNIST classification
 - **Overall Description**: 이 문서는 최종결과물의 사용자메뉴얼을 담고 있습니다. (This document contains the user manual for the final product.)
-- **Team Leader**: Jueun Jung
+- **Team Leader**: xxx
 - **Revision History**:
   | Date          | Version | Description          |
   |---------------|---------|----------------------|
