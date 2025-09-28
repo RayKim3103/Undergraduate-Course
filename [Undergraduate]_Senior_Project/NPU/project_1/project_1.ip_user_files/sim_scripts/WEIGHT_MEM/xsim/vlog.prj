@@ -1,6 +1,0 @@
-verilog xil_defaultlib  \
-"../../../../project_1.gen/sources_1/ip/WEIGHT_MEM/sim/WEIGHT_MEM.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-nosort

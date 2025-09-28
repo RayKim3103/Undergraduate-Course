@@ -1,2 +1,0 @@
-WEIGHT_ROW_MEM.v,verilog,xil_defaultlib,../../../../project_1.gen/sources_1/ip/WEIGHT_ROW_MEM/sim/WEIGHT_ROW_MEM.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v
