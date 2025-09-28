@@ -1,0 +1,2 @@
+INPUT_MEM.v,verilog,xil_defaultlib,../../../../project_1.gen/sources_1/ip/INPUT_MEM/sim/INPUT_MEM.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

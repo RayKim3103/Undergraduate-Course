@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Sep 27 20:29:12 2025
+# Process ID: 36372
+# Current directory: C:/minsung/senior_project/VIVADO/project_1/project_1.runs/WEIGHT_MEM_synth_1
+# Command line: vivado.exe -log WEIGHT_MEM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WEIGHT_MEM.tcl
+# Log file: C:/minsung/senior_project/VIVADO/project_1/project_1.runs/WEIGHT_MEM_synth_1/WEIGHT_MEM.vds
+# Journal file: C:/minsung/senior_project/VIVADO/project_1/project_1.runs/WEIGHT_MEM_synth_1\vivado.jou
+#-----------------------------------------------------------
+source WEIGHT_MEM.tcl -notrace

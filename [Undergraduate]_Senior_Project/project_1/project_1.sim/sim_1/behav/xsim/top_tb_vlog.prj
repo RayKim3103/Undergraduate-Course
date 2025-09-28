@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.gen/sources_1/ip/WEIGHT_ROW_MEM/sim/WEIGHT_ROW_MEM.v" \
+"../../../../project_1.gen/sources_1/ip/IA_ROW_MEM/sim/IA_ROW_MEM.v" \
+"../../../../project_1.gen/sources_1/ip/WEIGHT_MEM/sim/WEIGHT_MEM.v" \
+"../../../../project_1.gen/sources_1/ip/INPUT_MEM/sim/INPUT_MEM.v" \
+"../../../../act_n_weight_ctrlr.v" \
+"../../../../dense_core.v" \
+"../../../../top.v" \
+"../../../../top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../project_1.gen/sources_1/ip/IA_ROW_MEM/sim/IA_ROW_MEM.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
