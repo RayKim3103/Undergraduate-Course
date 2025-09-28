@@ -1,0 +1,1 @@
+NPU for real time object detection
