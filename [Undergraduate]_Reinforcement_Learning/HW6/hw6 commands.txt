@@ -1,0 +1,32 @@
+hw6 commands
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_0_iter.yaml \
+> halfcheetah_0_iter.txt 2>&1 && \
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_multi_iter.yaml \
+> halfcheetah_multi_iter.txt 2>&1 && \
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem.yaml \
+> halfcheetah_cem.txt 2>&1 && \
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem_H-1.yaml \
+> halfcheetah_cem_H-1.txt 2>&1 && \
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem_K-50.yaml \
+> halfcheetah_cem_K-50.txt 2>&1
+
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_0_iter.yaml \
+> halfcheetah_0_iter.txt 2>&1 &
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_multi_iter.yaml \
+> halfcheetah_multi_iter.txt 2>&1 &
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem.yaml \
+> halfcheetah_cem.txt 2>&1 &
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem_H-1.yaml \
+> halfcheetah_cem_H-1.txt 2>&1 &
+
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem_K-50.yaml \
+> halfcheetah_cem_K-50.txt 2>&1 &

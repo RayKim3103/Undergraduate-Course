@@ -1,0 +1,12 @@
+AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details
+error: XDG_RUNTIME_DIR not set in the environment.
+########################
+logging outputs to  /root/hw7/cas4160/scripts/../../data/hw7_RLHF-PointMaze_PointMaze_UMazeDense-v3_10-06-2026_14-44-50
+########################
+ * Serving Flask app 'run_hw7'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.244.203.57:5000
+[33mPress CTRL+C to quit[0m

@@ -1,0 +1,777 @@
+AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details
+error: XDG_RUNTIME_DIR not set in the environment.
+########################
+logging outputs to  /root/hw7/cas4160/scripts/../../data/hw7_RLHF-PointMaze_PointMaze_UMazeDense-v3_10-06-2026_04-52-09
+########################
+ * Serving Flask app 'run_hw7'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.244.203.57:5000
+[33mPress CTRL+C to quit[0m
+10.1.1.3 - - [10/Jun/2026 04:52:23] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:52:25] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:52:28] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:52:31] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:52:34] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:52:37] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:52:40] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:53:42] "[35m[1mGET /static/uploads/itr0_4.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:53:42] "[35m[1mGET /static/uploads/itr0_0.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:53:50] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:53:50] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:53:50] "[35m[1mGET /static/uploads/itr0_8.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:53:50] "[35m[1mGET /static/uploads/itr0_0.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:53:56] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:53:56] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:53:56] "[35m[1mGET /static/uploads/itr0_0.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:53:56] "[35m[1mGET /static/uploads/itr0_7.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:00] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:00] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:00] "[35m[1mGET /static/uploads/itr0_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:00] "[35m[1mGET /static/uploads/itr0_2.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:06] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:06] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:06] "[35m[1mGET /static/uploads/itr0_11.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:07] "[35m[1mGET /static/uploads/itr0_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:09] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:09] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:10] "[35m[1mGET /static/uploads/itr0_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:10] "[35m[1mGET /static/uploads/itr0_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:15] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:15] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:15] "[35m[1mGET /static/uploads/itr0_8.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:15] "[35m[1mGET /static/uploads/itr0_2.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:21] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:21] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:21] "[35m[1mGET /static/uploads/itr0_4.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:21] "[35m[1mGET /static/uploads/itr0_13.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:54:26] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:26] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:28] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:30] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:32] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:34] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:37] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:40] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:43] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:45] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:49] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:51] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:54] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:54:57] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:00] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:03] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:06] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:09] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:09] "[35m[1mGET /static/uploads/itr2_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:55:09] "[35m[1mGET /static/uploads/itr2_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:55:19] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:19] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:19] "[35m[1mGET /static/uploads/itr2_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:55:19] "[35m[1mGET /static/uploads/itr2_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:55:27] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:27] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:27] "[35m[1mGET /static/uploads/itr2_9.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:55:27] "[35m[1mGET /static/uploads/itr2_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:55:31] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:32] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:32] "[35m[1mGET /static/uploads/itr2_13.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:55:32] "[35m[1mGET /static/uploads/itr2_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:55:34] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:34] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:36] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:38] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:40] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:42] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:44] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:46] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:48] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:51] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:53] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:55] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:57] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:55:59] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:03] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:06] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:07] "[35m[1mGET /static/uploads/itr4_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:56:07] "[35m[1mGET /static/uploads/itr4_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:56:15] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:15] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:15] "[35m[1mGET /static/uploads/itr4_0.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:56:15] "[35m[1mGET /static/uploads/itr4_6.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:56:20] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:20] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:20] "[35m[1mGET /static/uploads/itr4_7.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:56:20] "[35m[1mGET /static/uploads/itr4_4.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:56:24] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:24] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:24] "[35m[1mGET /static/uploads/itr4_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:56:24] "[35m[1mGET /static/uploads/itr4_4.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:56:29] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:29] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:31] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:34] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:36] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:38] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:41] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:44] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:46] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:49] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:51] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:53] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:55] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:57] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:56:59] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:03] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:05] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:07] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:10] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:10] "[35m[1mGET /static/uploads/itr6_8.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:57:10] "[35m[1mGET /static/uploads/itr6_6.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:57:15] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:15] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:15] "[35m[1mGET /static/uploads/itr6_2.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:57:15] "[35m[1mGET /static/uploads/itr6_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:57:20] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:21] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:21] "[35m[1mGET /static/uploads/itr6_9.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:57:21] "[35m[1mGET /static/uploads/itr6_8.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:57:27] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:27] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:27] "[35m[1mGET /static/uploads/itr6_12.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:57:27] "[35m[1mGET /static/uploads/itr6_11.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:57:35] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:35] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:37] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:39] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:41] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:43] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:45] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:47] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:50] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:52] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:54] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:56] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:57:58] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:58:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:58:04] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:58:07] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:58:08] "[35m[1mGET /static/uploads/itr8_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:58:08] "[35m[1mGET /static/uploads/itr8_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:59:10] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:10] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:10] "[35m[1mGET /static/uploads/itr8_7.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:59:10] "[35m[1mGET /static/uploads/itr8_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:59:17] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:17] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:17] "[35m[1mGET /static/uploads/itr8_3.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:59:17] "[35m[1mGET /static/uploads/itr8_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:59:20] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:20] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:20] "[35m[1mGET /static/uploads/itr8_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:59:20] "[35m[1mGET /static/uploads/itr8_12.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 04:59:26] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:26] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:29] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:31] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:33] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:35] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:37] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:39] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:41] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:43] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:46] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:48] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:51] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:53] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:55] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:57] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:59:59] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:03] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:05] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:07] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:07] "[35m[1mGET /static/uploads/itr10_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:00:07] "[35m[1mGET /static/uploads/itr10_8.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:00:47] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:47] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:47] "[35m[1mGET /static/uploads/itr10_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:00:47] "[35m[1mGET /static/uploads/itr10_6.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:00:51] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:51] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:51] "[35m[1mGET /static/uploads/itr10_12.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:00:51] "[35m[1mGET /static/uploads/itr10_7.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:00:56] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:57] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:00:57] "[35m[1mGET /static/uploads/itr10_3.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:00:57] "[35m[1mGET /static/uploads/itr10_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:01] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:03] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:05] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:08] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:10] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:12] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:14] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:16] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:18] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:20] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:22] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:24] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:26] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:28] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:31] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:33] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:33] "[35m[1mGET /static/uploads/itr12_12.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:33] "[35m[1mGET /static/uploads/itr12_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:41] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:41] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:41] "[35m[1mGET /static/uploads/itr12_8.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:41] "[35m[1mGET /static/uploads/itr12_4.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:46] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:46] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:46] "[35m[1mGET /static/uploads/itr12_3.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:46] "[35m[1mGET /static/uploads/itr12_9.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:49] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:49] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:49] "[35m[1mGET /static/uploads/itr12_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:49] "[35m[1mGET /static/uploads/itr12_13.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:01:53] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:53] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:55] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:57] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:01:59] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:03] "GET / HTTP/1.1" 200 -
+Using GPU id 0
+
+********** Iteration 0 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : -15.21865463256836
+Eval_StdReturn : 3.796623945236206
+Eval_MaxReturn : -11.292182922363281
+Eval_MinReturn : -21.49651336669922
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -11.082392692565918
+Train_StdReturn : 2.7963614463806152
+Train_MaxReturn : -6.770094394683838
+Train_MinReturn : -17.41126823425293
+Train_AverageEpLen : 151.0
+PPO Loss : -0.010115882381796837
+kl : -0.0005581777077168226
+Baseline Loss : 11.085558891296387
+Train_EnvstepsSoFar : 2114
+TimeSinceStart : 142.4585666656494
+Initial_DataCollection_AverageReturn : -11.082392692565918
+
+********** Iteration 1 ************
+Eval_AverageReturn : -8.805588722229004
+Eval_StdReturn : 4.229675769805908
+Eval_MaxReturn : -3.449512243270874
+Eval_MinReturn : -15.166014671325684
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -14.415128707885742
+Train_StdReturn : 4.072945594787598
+Train_MaxReturn : -4.702020168304443
+Train_MinReturn : -20.440383911132812
+Train_AverageEpLen : 151.0
+PPO Loss : 0.00830825325101614
+kl : 0.009519608691334724
+Baseline Loss : 6.340576171875
+Train_EnvstepsSoFar : 4228
+TimeSinceStart : 147.89800000190735
+
+********** Iteration 2 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 13.498794555664062
+Eval_StdReturn : 1.5495452880859375
+Eval_MaxReturn : 16.12425994873047
+Eval_MinReturn : 12.145645141601562
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 12.950065612792969
+Train_StdReturn : 2.24355411529541
+Train_MaxReturn : 18.181488037109375
+Train_MinReturn : 9.837883949279785
+Train_AverageEpLen : 151.0
+PPO Loss : -0.0011505420552566648
+kl : 0.014551243744790554
+Baseline Loss : 59.2353401184082
+Train_EnvstepsSoFar : 6342
+TimeSinceStart : 203.92843770980835
+
+********** Iteration 3 ************
+Eval_AverageReturn : 15.160566329956055
+Eval_StdReturn : 1.9132298231124878
+Eval_MaxReturn : 18.44542694091797
+Eval_MinReturn : 13.69118881225586
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 14.159517288208008
+Train_StdReturn : 2.0836479663848877
+Train_MaxReturn : 18.75250244140625
+Train_MinReturn : 9.46257209777832
+Train_AverageEpLen : 151.0
+PPO Loss : -0.002306308364495635
+kl : 0.006625531241297722
+Baseline Loss : 26.01202964782715
+Train_EnvstepsSoFar : 8456
+TimeSinceStart : 205.7669746875763
+
+********** Iteration 4 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 5.299920082092285
+Eval_StdReturn : 0.563088059425354
+Eval_MaxReturn : 5.944869518280029
+Eval_MinReturn : 4.50685977935791
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 6.541934967041016
+Train_StdReturn : 1.2883555889129639
+Train_MaxReturn : 7.988154888153076
+Train_MinReturn : 3.2833821773529053
+Train_AverageEpLen : 151.0
+PPO Loss : -0.007136323023587465
+kl : 0.015382346697151661
+Baseline Loss : 2.8184666633605957
+Train_EnvstepsSoFar : 10570
+TimeSinceStart : 265.1366946697235
+
+********** Iteration 5 ************
+Eval_AverageReturn : 7.346103668212891
+Eval_StdReturn : 1.7373535633087158
+Eval_MaxReturn : 8.91763687133789
+Eval_MinReturn : 4.506850242614746
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 6.2134528160095215
+Train_StdReturn : 1.5598111152648926
+Train_MaxReturn : 8.343087196350098
+Train_MinReturn : 3.457542896270752
+Train_AverageEpLen : 151.0
+PPO Loss : -0.006922893691807985
+kl : 0.014180688187479973
+Baseline Loss : 2.2312564849853516
+Train_EnvstepsSoFar : 12684
+TimeSinceStart : 270.6024706363678
+
+********** Iteration 6 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 6.501729965209961
+Eval_StdReturn : 1.1008634567260742
+Eval_MaxReturn : 8.006640434265137
+Eval_MinReturn : 5.075516700744629
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 4.7794508934021
+Train_StdReturn : 0.9645953178405762
+Train_MaxReturn : 6.4166789054870605
+Train_MinReturn : 2.815178632736206
+Train_AverageEpLen : 151.0
+PPO Loss : 0.0007285347674041986
+kl : 0.005054159089922905
+Baseline Loss : 1.81583833694458
+Train_EnvstepsSoFar : 14798
+TimeSinceStart : 325.14838767051697
+
+********** Iteration 7 ************
+Eval_AverageReturn : 6.117663860321045
+Eval_StdReturn : 1.26262629032135
+Eval_MaxReturn : 7.627828121185303
+Eval_MinReturn : 4.420414447784424
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 5.447208881378174
+Train_StdReturn : 0.9664224982261658
+Train_MaxReturn : 6.867429733276367
+Train_MinReturn : 3.9433586597442627
+Train_AverageEpLen : 151.0
+PPO Loss : -0.005520757287740707
+kl : 3.8819700421299785e-05
+Baseline Loss : 2.605161666870117
+Train_EnvstepsSoFar : 16912
+TimeSinceStart : 326.9304795265198
+
+********** Iteration 8 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 12.70244312286377
+Eval_StdReturn : 0.9994905591011047
+Eval_MaxReturn : 13.754864692687988
+Eval_MinReturn : 11.063870429992676
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 12.184171676635742
+Train_StdReturn : 1.0903313159942627
+Train_MaxReturn : 14.04042911529541
+Train_MinReturn : 9.969050407409668
+Train_AverageEpLen : 151.0
+PPO Loss : -0.0004919068305753171
+kl : 0.0036361385136842728
+Baseline Loss : 7.711556911468506
+Train_EnvstepsSoFar : 19026
+TimeSinceStart : 442.11510610580444
+
+********** Iteration 9 ************
+Eval_AverageReturn : 13.382140159606934
+Eval_StdReturn : 1.0621016025543213
+Eval_MaxReturn : 14.869833946228027
+Eval_MinReturn : 12.365886688232422
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 12.207043647766113
+Train_StdReturn : 0.8170164227485657
+Train_MaxReturn : 13.436162948608398
+Train_MinReturn : 10.283071517944336
+Train_AverageEpLen : 151.0
+PPO Loss : -0.004737502429634333
+kl : 0.00983406975865364
+Baseline Loss : 4.148989677429199
+Train_EnvstepsSoFar : 21140
+TimeSinceStart : 447.65028834342957
+
+********** Iteration 10 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 17.108224868774414
+Eval_StdReturn : 1.4837839603424072
+Eval_MaxReturn : 19.603939056396484
+Eval_MinReturn : 15.698657989501953
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 17.306364059448242
+Train_StdReturn : 1.6881183385849
+Train_MaxReturn : 20.472991943359375
+Train_MinReturn : 14.550703048706055
+Train_AverageEpLen : 151.0
+PPO Loss : 0.002745656296610832
+kl : 0.005511856637895107
+Baseline Loss : 10.683035850524902
+Train_EnvstepsSoFar : 23254
+TimeSinceStart : 531.2492291927338
+
+********** Iteration 11 ************
+Eval_AverageReturn : 19.535518646240234
+Eval_StdReturn : 0.18493933975696564
+Eval_MaxReturn : 19.70595932006836
+Eval_MinReturn : 19.225189208984375
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 17.776445388793945
+Train_StdReturn : 1.7032216787338257
+Train_MaxReturn : 19.697256088256836
+Train_MinReturn : 14.44884967803955
+Train_AverageEpLen : 151.0
+PPO Loss : 0.0038917928468436003
+kl : 0.0019842181354761124
+Baseline Loss : 6.372936725616455
+Train_EnvstepsSoFar : 25368
+TimeSinceStart : 533.0552299022675
+
+********** Iteration 12 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 25.62677001953125
+Eval_StdReturn : 1.6161375045776367
+Eval_MaxReturn : 27.339717864990234
+Eval_MinReturn : 23.101436614990234
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 23.458742141723633
+Train_StdReturn : 2.5045313835144043
+Train_MaxReturn : 28.18426513671875
+Train_MinReturn : 19.974794387817383
+Train_AverageEpLen : 151.0
+PPO Loss : -0.007552814669907093
+kl : 0.009076320566236973
+Baseline Loss : 13.526474952697754
+Train_EnvstepsSoFar : 27482
+TimeSinceStart : 588.6422619819641
+
+********** Iteration 13 ************
+Eval_AverageReturn : 27.578384399414062
+Eval_StdReturn : 2.660447835922241
+Eval_MaxReturn : 31.575641632080078
+Eval_MinReturn : 24.210437774658203
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 25.69572639465332
+Train_StdReturn : 2.9607715606689453
+Train_MaxReturn : 30.98464584350586
+Train_MinReturn : 19.328609466552734
+Train_AverageEpLen : 151.0
+PPO Loss : 0.003545931074768305
+kl : 0.01439415942877531
+Baseline Loss : 12.011441230773926
+Train_EnvstepsSoFar : 29596
+10.1.1.3 - - [10/Jun/2026 05:02:05] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:07] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:10] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:12] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:14] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:16] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:18] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:20] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:22] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:24] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:26] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:28] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:30] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:32] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:33] "[35m[1mGET /static/uploads/itr14_0.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:02:33] "[35m[1mGET /static/uploads/itr14_5.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:02:37] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:37] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:37] "[35m[1mGET /static/uploads/itr14_7.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:02:37] "[35m[1mGET /static/uploads/itr14_0.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:02:39] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:40] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:40] "[35m[1mGET /static/uploads/itr14_13.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:02:40] "[35m[1mGET /static/uploads/itr14_8.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:02:42] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:42] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:42] "[35m[1mGET /static/uploads/itr14_12.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:02:42] "[35m[1mGET /static/uploads/itr14_7.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:02:45] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:45] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:47] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:49] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:51] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:53] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:55] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:57] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:02:59] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:04] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:06] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:08] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:10] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:12] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:14] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:17] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:17] "[35m[1mGET /static/uploads/itr16_8.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:03:17] "[35m[1mGET /static/uploads/itr16_7.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:03:27] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:27] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:27] "[35m[1mGET /static/uploads/itr16_2.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:03:27] "[35m[1mGET /static/uploads/itr16_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:03:31] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:31] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:31] "[35m[1mGET /static/uploads/itr16_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:03:32] "[35m[1mGET /static/uploads/itr16_4.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:03:38] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:38] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:38] "[35m[1mGET /static/uploads/itr16_3.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:03:38] "[35m[1mGET /static/uploads/itr16_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:03:43] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:43] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:45] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:47] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:50] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:52] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:54] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:56] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:03:58] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:00] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:02] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:04] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:06] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:08] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:10] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:12] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:15] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:17] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:19] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:22] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:24] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:04:24] "[35m[1mGET /static/uploads/itr18_11.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:04:24] "[35m[1mGET /static/uploads/itr18_3.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:05:14] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:14] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:14] "[35m[1mGET /static/uploads/itr18_9.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:05:14] "[35m[1mGET /static/uploads/itr18_11.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:05:16] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:16] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:16] "[35m[1mGET /static/uploads/itr18_6.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:05:16] "[35m[1mGET /static/uploads/itr18_1.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:05:21] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:21] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:21] "[35m[1mGET /static/uploads/itr18_11.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:05:21] "[35m[1mGET /static/uploads/itr18_3.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:05:26] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:26] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:28] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:30] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:32] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:34] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:36] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:38] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:40] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:42] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:44] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:46] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:48] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:50] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:52] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:54] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:57] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:05:57] "[35m[1mGET /static/uploads/itr20_10.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:05:57] "[35m[1mGET /static/uploads/itr20_13.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:06:01] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:01] "[35m[1mGET /static/uploads/itr20_7.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:06:01] "[35m[1mGET /static/uploads/itr20_11.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:06:04] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:04] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:04] "[35m[1mGET /static/uploads/itr20_12.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:06:04] "[35m[1mGET /static/uploads/itr20_13.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:06:11] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:12] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:12] "[35m[1mGET /static/uploads/itr20_6.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:06:12] "[35m[1mGET /static/uploads/itr20_11.mp4 HTTP/1.1[0m" 206 -
+10.1.1.3 - - [10/Jun/2026 05:06:14] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:14] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:17] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:19] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:21] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:23] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:25] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:27] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:27] "POST /feedback HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 05:06:28] "GET / HTTP/1.1" 200 -
+TimeSinceStart : 594.1781437397003
+
+********** Iteration 14 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 27.243080139160156
+Eval_StdReturn : 1.6892082691192627
+Eval_MaxReturn : 29.082874298095703
+Eval_MinReturn : 25.413951873779297
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 28.024709701538086
+Train_StdReturn : 1.9098272323608398
+Train_MaxReturn : 31.774494171142578
+Train_MinReturn : 24.662954330444336
+Train_AverageEpLen : 151.0
+PPO Loss : 0.002273190300911665
+kl : 0.009948608465492725
+Baseline Loss : 11.010732650756836
+Train_EnvstepsSoFar : 31710
+TimeSinceStart : 635.0921342372894
+
+********** Iteration 15 ************
+Eval_AverageReturn : 28.019508361816406
+Eval_StdReturn : 1.3631949424743652
+Eval_MaxReturn : 29.513132095336914
+Eval_MinReturn : 25.810604095458984
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 27.641592025756836
+Train_StdReturn : 2.1838715076446533
+Train_MaxReturn : 31.66594696044922
+Train_MinReturn : 22.916458129882812
+Train_AverageEpLen : 151.0
+PPO Loss : 0.0011699574533849955
+kl : 0.005324018187820911
+Baseline Loss : 7.314494609832764
+Train_EnvstepsSoFar : 33824
+TimeSinceStart : 636.9079458713531
+
+********** Iteration 16 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 33.65423583984375
+Eval_StdReturn : 2.6655619144439697
+Eval_MaxReturn : 38.112571716308594
+Eval_MinReturn : 31.182083129882812
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 31.41879653930664
+Train_StdReturn : 3.174936294555664
+Train_MaxReturn : 37.331642150878906
+Train_MinReturn : 25.545297622680664
+Train_AverageEpLen : 151.0
+PPO Loss : 0.003792034462094307
+kl : 0.023273149505257607
+Baseline Loss : 9.149519920349121
+Train_EnvstepsSoFar : 35938
+TimeSinceStart : 699.1459312438965
+
+********** Iteration 17 ************
+Eval_AverageReturn : 32.765899658203125
+Eval_StdReturn : 2.989459276199341
+Eval_MaxReturn : 36.693153381347656
+Eval_MinReturn : 28.28778076171875
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 34.56313705444336
+Train_StdReturn : 1.5420767068862915
+Train_MaxReturn : 37.50123596191406
+Train_MinReturn : 32.06288146972656
+Train_AverageEpLen : 151.0
+PPO Loss : -0.0023702189791947603
+kl : -0.0011344488011673093
+Baseline Loss : 8.409133911132812
+Train_EnvstepsSoFar : 38052
+TimeSinceStart : 704.6269361972809
+
+********** Iteration 18 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 35.74790573120117
+Eval_StdReturn : 2.1720094680786133
+Eval_MaxReturn : 38.29816436767578
+Eval_MinReturn : 32.54180908203125
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 35.50422668457031
+Train_StdReturn : 3.2642722129821777
+Train_MaxReturn : 40.834590911865234
+Train_MinReturn : 29.181255340576172
+Train_AverageEpLen : 151.0
+PPO Loss : -0.004326923750340939
+kl : 0.008740386925637722
+Baseline Loss : 9.417641639709473
+Train_EnvstepsSoFar : 40166
+TimeSinceStart : 795.6680271625519
+
+********** Iteration 19 ************
+Eval_AverageReturn : 35.900840759277344
+Eval_StdReturn : 0.37477385997772217
+Eval_MaxReturn : 36.455665588378906
+Eval_MinReturn : 35.39849853515625
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 35.7913703918457
+Train_StdReturn : 1.8873317241668701
+Train_MaxReturn : 38.60902404785156
+Train_MinReturn : 30.093385696411133
+Train_AverageEpLen : 151.0
+PPO Loss : 0.0007047119433991611
+kl : 0.006048659328371286
+Baseline Loss : 7.1563191413879395
+Train_EnvstepsSoFar : 42280
+TimeSinceStart : 797.4870028495789
+
+********** Iteration 20 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 37.00104904174805
+Eval_StdReturn : 2.8884613513946533
+Eval_MaxReturn : 41.99018859863281
+Eval_MinReturn : 35.04044723510742
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 37.238250732421875
+Train_StdReturn : 2.2127299308776855
+Train_MaxReturn : 41.52055740356445
+Train_MinReturn : 32.53011703491211
+Train_AverageEpLen : 151.0
+PPO Loss : -0.006950617302209139
+kl : 0.004319388419389725
+Baseline Loss : 7.861378192901611
+Train_EnvstepsSoFar : 44394
+TimeSinceStart : 850.0553824901581
+Finish button clicked

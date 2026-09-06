@@ -1,0 +1,32 @@
+q2_pg_cartpole_CartPole-v0_31-03-2026_13-45-17
+q2_pg_cartpole_lb_CartPole-v0_31-03-2026_13-52-17
+q2_pg_cartpole_lb_na_CartPole-v0_31-03-2026_14-02-02
+q2_pg_cartpole_lb_rtg_CartPole-v0_31-03-2026_13-57-09
+q2_pg_cartpole_lb_rtg_na_CartPole-v0_31-03-2026_14-06-53
+q2_pg_cartpole_na_CartPole-v0_31-03-2026_13-48-47
+q2_pg_cartpole_rtg_CartPole-v0_31-03-2026_13-47-03
+q2_pg_cartpole_rtg_na_CartPole-v0_31-03-2026_13-50-31
+
+q2_pg_cheetah_HalfCheetah-v4_31-03-2026_14-11-46
+q2_pg_cheetah_baseline_HalfCheetah-v4_31-03-2026_14-17-26
+q2_pg_cheetah_baseline_bgs1_blr001_HalfCheetah-v4_31-03-2026_14-40-14
+q2_pg_cheetah_baseline_bgs1_blr001_na_HalfCheetah-v4_31-03-2026_14-45-55
+
+q2_pg_HumanoidStandup_lambda0_HumanoidStandup-v5_31-03-2026_14-23-06
+q2_pg_HumanoidStandup_lambda0.95_HumanoidStandup-v5_31-03-2026_14-25-17
+q2_pg_HumanoidStandup_lambda1_HumanoidStandup-v5_31-03-2026_14-27-27
+
+q2_pg_reacher_ppo_Reacher-v4_31-03-2026_14-34-52
+q2_pg_reacher_Reacher-v4_31-03-2026_14-29-39
+
+
+python cas4160/scripts/parse_tensorboard.py \
+    --input_log_files \
+        data/q2_pg_reacher_ppo_Reacher-v4_31-03-2026_14-34-52 \
+        data/q2_pg_reacher_ppo_no_surrogate_Reacher-v4_XXXXXXXX_XX-XX-XX \
+    --human_readable_names "PPO (with Surrogate + Clip)" "No Surrogate (Multiple Vanilla Updates)" \
+    --data_key "Eval_AverageReturn" \
+    --title "Reacher-v4: PPO vs No Surrogate Objective" \
+    --x_label_name "Train Environment Steps" \
+    --y_label_name "Eval Return" \
+    --output_file "reacher_ppo_vs_no_surrogate.png"

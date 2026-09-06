@@ -1,0 +1,19 @@
+python cas4160/scripts/run_cql.py --env_name PointmassMedium-v0 \
+--exp_name cql_alpha_0.0_expert \
+--dataset_name expert --cql_alpha=0.0 \
+2>&1 | tee output_alpha_0.0_expert.txt &
+python cas4160/scripts/run_cql.py --env_name PointmassMedium-v0 \
+--exp_name cql_alpha_0.1_expert \
+--dataset_name expert --cql_alpha=0.1 \
+2>&1 | tee output_alpha_0.1_expert.txt &
+# α = 0.0 random
+python cas4160/scripts/run_cql.py --env_name PointmassMedium-v0 \
+--exp_name cql_alpha_0.0_random \
+--dataset_name random --cql_alpha=0.0 \
+2>&1 | tee output_alpha_0.0_random.txt &
+
+# α = 0.1 random
+python cas4160/scripts/run_cql.py --env_name PointmassMedium-v0 \
+--exp_name cql_alpha_0.1_random \
+--dataset_name random --cql_alpha=0.1 \
+2>&1 | tee output_alpha_0.1_random.txt

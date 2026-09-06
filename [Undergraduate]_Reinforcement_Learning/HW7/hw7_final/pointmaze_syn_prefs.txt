@@ -1,0 +1,466 @@
+AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details
+error: XDG_RUNTIME_DIR not set in the environment.
+########################
+logging outputs to  /root/hw7/cas4160/scripts/../../data/hw7_RLHF-PointMaze_PointMaze_UMazeDense-v3_10-06-2026_04-43-16
+########################
+ * Serving Flask app 'run_hw7'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.244.203.57:5000
+[33mPress CTRL+C to quit[0m
+10.1.1.3 - - [10/Jun/2026 04:45:38] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:45:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.1.1.3 - - [10/Jun/2026 04:45:40] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:45:42] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:45:44] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:45:46] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:45:50] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:45:52] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:45:55] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:45:58] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:04] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:07] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:10] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:13] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:16] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:19] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:22] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:25] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:29] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:31] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:34] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:37] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:40] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:43] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:46] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:49] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:52] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:46:55] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:47:30] "[33mGET /static/uploads/itr10_6.mp4 HTTP/1.1[0m" 404 -
+10.1.1.3 - - [10/Jun/2026 04:47:30] "[33mGET /static/uploads/itr10_3.mp4 HTTP/1.1[0m" 404 -
+Using GPU id 0
+
+********** Iteration 0 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : -10.886764526367188
+Eval_StdReturn : 10.724705696105957
+Eval_MaxReturn : 7.573143482208252
+Eval_MinReturn : -18.73906135559082
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -14.065146446228027
+Train_StdReturn : 8.456610679626465
+Train_MaxReturn : 4.576040744781494
+Train_MinReturn : -23.396442413330078
+Train_AverageEpLen : 151.0
+PPO Loss : -0.0010056414175778627
+kl : 0.017460258677601814
+Baseline Loss : 36.85689926147461
+Train_EnvstepsSoFar : 2114
+TimeSinceStart : 35.51733756065369
+Initial_DataCollection_AverageReturn : -14.065146446228027
+
+********** Iteration 1 ************
+Eval_AverageReturn : -6.306588172912598
+Eval_StdReturn : 10.5988130569458
+Eval_MaxReturn : 4.960017204284668
+Eval_MinReturn : -17.190698623657227
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -6.57438325881958
+Train_StdReturn : 9.731478691101074
+Train_MaxReturn : 12.414939880371094
+Train_MinReturn : -17.952129364013672
+Train_AverageEpLen : 151.0
+PPO Loss : -0.006405098829418421
+kl : 0.012548460625112057
+Baseline Loss : 14.738706588745117
+Train_EnvstepsSoFar : 4228
+TimeSinceStart : 40.93486976623535
+
+********** Iteration 2 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : -3.166773796081543
+Eval_StdReturn : 6.996368885040283
+Eval_MaxReturn : 7.171679496765137
+Eval_MinReturn : -10.8973970413208
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 0.48542118072509766
+Train_StdReturn : 5.691134929656982
+Train_MaxReturn : 13.945184707641602
+Train_MinReturn : -6.845597267150879
+Train_AverageEpLen : 151.0
+PPO Loss : -0.00326952850446105
+kl : 0.00926116667687893
+Baseline Loss : 24.476667404174805
+Train_EnvstepsSoFar : 6342
+TimeSinceStart : 71.51150822639465
+
+********** Iteration 3 ************
+Eval_AverageReturn : -0.7783699035644531
+Eval_StdReturn : 6.184537410736084
+Eval_MaxReturn : 5.995782852172852
+Eval_MinReturn : -8.038501739501953
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 2.9964280128479004
+Train_StdReturn : 6.686705112457275
+Train_MaxReturn : 12.233003616333008
+Train_MinReturn : -9.439910888671875
+Train_AverageEpLen : 151.0
+PPO Loss : 0.0076719848439097404
+kl : 0.0036038286052644253
+Baseline Loss : 25.460283279418945
+Train_EnvstepsSoFar : 8456
+TimeSinceStart : 73.25885462760925
+
+********** Iteration 4 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 0.03430032730102539
+Eval_StdReturn : 9.900084495544434
+Eval_MaxReturn : 8.93735122680664
+Eval_MinReturn : -16.749414443969727
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 0.6107105612754822
+Train_StdReturn : 8.501115798950195
+Train_MaxReturn : 13.081256866455078
+Train_MinReturn : -15.469657897949219
+Train_AverageEpLen : 151.0
+PPO Loss : -0.010029420256614685
+kl : -0.011063222773373127
+Baseline Loss : 19.674259185791016
+Train_EnvstepsSoFar : 10570
+TimeSinceStart : 109.61103081703186
+
+********** Iteration 5 ************
+Eval_AverageReturn : 11.632577896118164
+Eval_StdReturn : 3.054089307785034
+Eval_MaxReturn : 14.971150398254395
+Eval_MinReturn : 8.368349075317383
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 5.430572986602783
+Train_StdReturn : 5.4574785232543945
+Train_MaxReturn : 13.433655738830566
+Train_MinReturn : -6.2054643630981445
+Train_AverageEpLen : 151.0
+PPO Loss : -0.007287805434316397
+kl : 0.012303379364311695
+Baseline Loss : 12.492137908935547
+Train_EnvstepsSoFar : 12684
+TimeSinceStart : 115.08922004699707
+
+********** Iteration 6 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 16.101696014404297
+Eval_StdReturn : 1.8761706352233887
+Eval_MaxReturn : 18.188060760498047
+Eval_MinReturn : 13.058677673339844
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 10.998785018920898
+Train_StdReturn : 3.469533681869507
+Train_MaxReturn : 19.63949203491211
+Train_MinReturn : 7.011598587036133
+Train_AverageEpLen : 151.0
+PPO Loss : -0.008313958533108234
+kl : 0.012899069115519524
+Baseline Loss : 13.628076553344727
+Train_EnvstepsSoFar : 14798
+TimeSinceStart : 145.18977546691895
+
+********** Iteration 7 ************
+Eval_AverageReturn : 16.169275283813477
+Eval_StdReturn : 1.3268548250198364
+Eval_MaxReturn : 17.650577545166016
+Eval_MinReturn : 14.27164363861084
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 16.121713638305664
+Train_StdReturn : 2.414011240005493
+Train_MaxReturn : 20.90212631225586
+Train_MinReturn : 12.01325511932373
+Train_AverageEpLen : 151.0
+PPO Loss : -0.0004941851366311312
+kl : 0.013731208629906178
+Baseline Loss : 17.831541061401367
+Train_EnvstepsSoFar : 16912
+TimeSinceStart : 146.95263814926147
+
+********** Iteration 8 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 13.281241416931152
+Eval_StdReturn : 1.1265350580215454
+Eval_MaxReturn : 14.803443908691406
+Eval_MinReturn : 11.902948379516602
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 13.030440330505371
+Train_StdReturn : 3.4221913814544678
+Train_MaxReturn : 19.443471908569336
+Train_MinReturn : 6.850155830383301
+Train_AverageEpLen : 151.0
+PPO Loss : -0.009866895154118538
+kl : 0.0018227306427434087
+Baseline Loss : 7.2599005699157715
+Train_EnvstepsSoFar : 19026
+TimeSinceStart : 183.20757675170898
+
+********** Iteration 9 ************
+Eval_AverageReturn : 18.891399383544922
+Eval_StdReturn : 1.2112106084823608
+Eval_MaxReturn : 20.55103302001953
+Eval_MinReturn : 17.49871063232422
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 16.14462661743164
+Train_StdReturn : 3.0981476306915283
+Train_MaxReturn : 23.468660354614258
+Train_MinReturn : 11.828065872192383
+Train_AverageEpLen : 151.0
+PPO Loss : -0.0004579400992952287
+kl : 0.019037503749132156
+Baseline Loss : 9.148974418640137
+Train_EnvstepsSoFar : 21140
+TimeSinceStart : 188.58465147018433
+
+********** Iteration 10 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 19.325084686279297
+Eval_StdReturn : 0.529788613319397
+Eval_MaxReturn : 19.96681785583496
+Eval_MinReturn : 18.545446395874023
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 17.439001083374023
+Train_StdReturn : 1.7286261320114136
+Train_MaxReturn : 19.51665496826172
+Train_MinReturn : 12.839717864990234
+Train_AverageEpLen : 151.0
+PPO Loss : -0.004460155498236418
+kl : 0.011378630995750427
+Baseline Loss : 6.63340950012207
+Train_EnvstepsSoFar : 23254
+TimeSinceStart : 218.9784677028656
+
+********** Iteration 11 ************
+Eval_AverageReturn : 19.637819290161133
+Eval_StdReturn : 1.0704939365386963
+Eval_MaxReturn : 21.355737686157227
+Eval_MinReturn : 18.624422073364258
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 19.995304107666016
+Train_StdReturn : 2.1084542274475098
+Train_MaxReturn : 23.07493019104004
+Train_MinReturn : 15.47774887084961
+Train_AverageEpLen : 151.0
+PPO Loss : -0.012007270008325577
+kl : 0.008299428038299084
+Baseline Loss : 8.308639526367188
+Train_EnvstepsSoFar : 25368
+TimeSinceStart : 220.73631858825684
+
+********** Iteration 12 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 15.459022521972656
+Eval_StdReturn : 0.6658855080604553
+Eval_MaxReturn : 16.523908615112305
+Eval_MinReturn : 14.712288856506348
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 14.020625114440918
+Train_StdReturn : 1.1085712909698486
+Train_MaxReturn : 15.791540145874023
+Train_MinReturn : 11.848036766052246
+Train_AverageEpLen : 151.0
+PPO Loss : -0.0035181923303753138
+kl : 0.011634969152510166
+Baseline Loss : 5.106645107269287
+Train_EnvstepsSoFar : 27482
+TimeSinceStart : 255.5290400981903
+
+********** Iteration 13 ************
+Eval_AverageReturn : 16.066797256469727
+Eval_StdReturn : 0.8043798804283142
+Eval_MaxReturn : 17.02996253967285
+Eval_MinReturn : 14.88659381866455
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 15.228151321411133
+Train_StdReturn : 1.2550837993621826
+Train_MaxReturn : 17.5076847076416
+Train_MinReturn : 12.8419828414917
+Train_AverageEpLen : 151.0
+PPO Loss : 0.004603914450854063
+kl : 0.012816831469535828
+Baseline Loss : 4.335086822509766
+10.1.1.3 - - [10/Jun/2026 04:48:33] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:35] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:37] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:40] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:43] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:46] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:49] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:52] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:55] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:48:58] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:01] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:04] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:06] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:09] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:12] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:15] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:19] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:21] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:24] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:27] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:30] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:33] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:36] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:39] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:42] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:45] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:48] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:50] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:53] "GET / HTTP/1.1" 200 -
+10.1.1.3 - - [10/Jun/2026 04:49:56] "GET / HTTP/1.1" 200 -
+Train_EnvstepsSoFar : 29596
+TimeSinceStart : 260.91589879989624
+
+********** Iteration 14 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 18.7276668548584
+Eval_StdReturn : 0.4992693066596985
+Eval_MaxReturn : 19.37264060974121
+Eval_MinReturn : 17.986461639404297
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 17.549388885498047
+Train_StdReturn : 0.858313262462616
+Train_MaxReturn : 19.895248413085938
+Train_MinReturn : 16.374740600585938
+Train_AverageEpLen : 151.0
+PPO Loss : -0.001159127801656723
+kl : 0.009101273491978645
+Baseline Loss : 3.952397346496582
+Train_EnvstepsSoFar : 31710
+TimeSinceStart : 290.4579510688782
+
+********** Iteration 15 ************
+Eval_AverageReturn : 19.02873992919922
+Eval_StdReturn : 1.183825135231018
+Eval_MaxReturn : 20.547218322753906
+Eval_MinReturn : 17.414566040039062
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 18.70899772644043
+Train_StdReturn : 0.8933307528495789
+Train_MaxReturn : 20.385507583618164
+Train_MinReturn : 16.816192626953125
+Train_AverageEpLen : 151.0
+PPO Loss : -0.006671840324997902
+kl : 0.008938899263739586
+Baseline Loss : 4.144231796264648
+Train_EnvstepsSoFar : 33824
+TimeSinceStart : 292.21958112716675
+
+********** Iteration 16 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 17.418811798095703
+Eval_StdReturn : 0.3938627243041992
+Eval_MaxReturn : 17.887414932250977
+Eval_MinReturn : 16.922637939453125
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 16.5557918548584
+Train_StdReturn : 1.0116628408432007
+Train_MaxReturn : 18.15920639038086
+Train_MinReturn : 14.340476989746094
+Train_AverageEpLen : 151.0
+PPO Loss : 0.004365641623735428
+kl : 0.018787110224366188
+Baseline Loss : 4.058440208435059
+Train_EnvstepsSoFar : 35938
+TimeSinceStart : 327.08700013160706
+
+********** Iteration 17 ************
+Eval_AverageReturn : 18.08769989013672
+Eval_StdReturn : 0.5645942091941833
+Eval_MaxReturn : 18.794113159179688
+Eval_MinReturn : 17.342866897583008
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 17.409027099609375
+Train_StdReturn : 0.9572167992591858
+Train_MaxReturn : 19.618335723876953
+Train_MinReturn : 15.709137916564941
+Train_AverageEpLen : 151.0
+PPO Loss : 0.009312336333096027
+kl : 0.009096377529203892
+Baseline Loss : 4.309054374694824
+Train_EnvstepsSoFar : 38052
+TimeSinceStart : 332.5790753364563
+
+********** Iteration 18 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 18.95237922668457
+Eval_StdReturn : 0.1522190421819687
+Eval_MaxReturn : 19.08911895751953
+Eval_MinReturn : 18.694320678710938
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 18.60927391052246
+Train_StdReturn : 0.8716487288475037
+Train_MaxReturn : 20.263757705688477
+Train_MinReturn : 17.150142669677734
+Train_AverageEpLen : 151.0
+PPO Loss : -0.001913680462166667
+kl : 0.0051911757327616215
+Baseline Loss : 5.211418151855469
+Train_EnvstepsSoFar : 40166
+TimeSinceStart : 361.62587237358093
+
+********** Iteration 19 ************
+Eval_AverageReturn : 20.022462844848633
+Eval_StdReturn : 0.20835857093334198
+Eval_MaxReturn : 20.337146759033203
+Eval_MinReturn : 19.766244888305664
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 18.885726928710938
+Train_StdReturn : 0.5686041712760925
+Train_MaxReturn : 20.12394905090332
+Train_MinReturn : 17.912630081176758
+Train_AverageEpLen : 151.0
+PPO Loss : -0.01152888685464859
+kl : 0.005815150216221809
+Baseline Loss : 4.963405132293701
+Train_EnvstepsSoFar : 42280
+TimeSinceStart : 363.37638330459595
+
+********** Iteration 20 ************
+
+Collecting video rollouts for feedback...
+✨ Waiting for user feedback...
+Eval_AverageReturn : 22.678722381591797
+Eval_StdReturn : 0.9459140300750732
+Eval_MaxReturn : 23.715404510498047
+Eval_MinReturn : 21.628917694091797
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 22.696590423583984
+Train_StdReturn : 0.8430788516998291
+Train_MaxReturn : 24.860639572143555
+Train_MinReturn : 21.53506088256836
+Train_AverageEpLen : 151.0
+PPO Loss : -0.0060068778693675995
+kl : 0.00970490463078022
+Baseline Loss : 7.633926868438721
+Train_EnvstepsSoFar : 44394
+TimeSinceStart : 397.56478905677795
+Finish button clicked

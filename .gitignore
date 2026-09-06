@@ -1,0 +1,14 @@
+# Temporary lecture source materials
+**/temp_lecture_notes/
+
+# Python generated files
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# TensorBoard / ML training logs
+**/events.out.tfevents.*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

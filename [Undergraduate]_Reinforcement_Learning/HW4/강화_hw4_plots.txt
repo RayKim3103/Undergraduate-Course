@@ -1,0 +1,223 @@
+SCRIPT="python cas4160/scripts/parse_tensorboard.py"
+
+echo "=== HW4 TensorBoard → PDF용 플롯 생성 시작 (y축 레이블 명확히 수정) ==="
+
+# 1. Sanity Pendulum 1 (Section 4.2)
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sanity_pendulum_Pendulum-v1_reinforce_* \
+  -n "Sanity Pendulum 1" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "Sanity Pendulum 1: Evaluation Return" \
+  -o sanity_pendulum1_eval_return.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sanity_pendulum_Pendulum-v1_reinforce_* \
+  -n "Sanity Pendulum 1" \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "Sanity Pendulum 1: Q Values" \
+  -o sanity_pendulum1_q_values.png
+
+# 2. SAC Pendulum 2 Entropy (Section 5.2)
+LOG_DIR=$(ls -dt /root/hw4/data/hw4_sac_sanity_pendulum_Pendulum-v1_none_* 2>/dev/null | head -n 1)
+if [ -z "$LOG_DIR" ]; then
+  echo "⚠️  Warning: sanity_pendulum_2 (none_*) 디렉토리를 찾을 수 없습니다."
+else
+  $SCRIPT \
+    -i "$LOG_DIR" \
+    -d entropy \
+    -n "SAC Pendulum 2 Entropy" \
+    -x "Environment Steps" \
+    -y "Policy Entropy" \
+    -t "sanity_pendulum_2: Policy Entropy (should reach ~0.69)" \
+    -o pendulum_sanity2_entropy.png
+fi
+
+# 3. Sanity Inverted Pendulum REINFORCE (Section 6.2 → Figure 1)
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sanity_invpendulum_reinforce_InvertedPendulum-v4_reinforce_* \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "InvertedPendulum-v4 REINFORCE: Evaluation Return" \
+  -o reinforce_sanity_invertedpendulum_eval_return.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sanity_invpendulum_reinforce_InvertedPendulum-v4_reinforce_* \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "InvertedPendulum-v4 REINFORCE: Q Values" \
+  -o reinforce_sanity_invertedpendulum_q_values.png
+
+# 4. HalfCheetah REINFORCE-1 (Section 6.2)
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_reinforce1_HalfCheetah-v4_reinforce_* \
+  -n "REINFORCE-1" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "HalfCheetah-v4 REINFORCE-1: Evaluation Return" \
+  -o reinforce1_HalfCheetah_eval_return.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_reinforce1_HalfCheetah-v4_reinforce_* \
+  -n "REINFORCE-1" \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "HalfCheetah-v4 REINFORCE-1: Q Values" \
+  -o reinforce1_HalfCheetah_q_values.png
+
+# 5. HalfCheetah REINFORCE-10 (Section 6.2)
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_reinforce10_HalfCheetah-v4_reinforce_* \
+  -n "REINFORCE-10" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "HalfCheetah-v4 REINFORCE-10: Evaluation Return" \
+  -o reinforce10_HalfCheetah_eval_return.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_reinforce10_HalfCheetah-v4_reinforce_* \
+  -n "REINFORCE-10" \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "HalfCheetah-v4 REINFORCE-10: Q Values" \
+  -o reinforce10_HalfCheetah_q_values.png
+
+# 6. Sanity Inverted Pendulum Reparametrized (Section 7.2)
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sanity_invpendulum_reparametrize_InvertedPendulum-v4_reparametrize_* \
+  -n "REPARAMETRIZE" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "InvertedPendulum-v4 REPARAMETRIZE: Evaluation Return" \
+  -o reparametrize_sanity_invpendulum_eval_return.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sanity_invpendulum_reparametrize_InvertedPendulum-v4_reparametrize_* \
+  -n "REPARAMETRIZE" \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "InvertedPendulum-v4 REPARAMETRIZE: Q Values" \
+  -o reparametrize_sanity_invpendulum_q_values.png
+
+# 7. HalfCheetah Reparametrized (Section 7.2)
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_reparametrize_HalfCheetah-v4_reparametrize_* \
+  -n "REPARAMETRIZE" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "HalfCheetah-v4 REPARAMETRIZE: Evaluation Return" \
+  -o reparametrize_HalfCheetah_eval_return.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_reparametrize_HalfCheetah-v4_reparametrize_* \
+  -n "REPARAMETRIZE" \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "HalfCheetah-v4 REPARAMETRIZE: Q Values" \
+  -o reparametrize_HalfCheetah_q_values.png
+
+# 8. HalfCheetah 3가지 방법 비교 (REINFORCE-1 vs REINFORCE-10 vs REPARAMETRIZE) → Figure 3
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_reinforce1_HalfCheetah-v4_reinforce_* \
+      /root/hw4/data/hw4_sac_reinforce10_HalfCheetah-v4_reinforce_* \
+      /root/hw4/data/hw4_sac_reparametrize_HalfCheetah-v4_reparametrize_* \
+  -n "REINFORCE-1" "REINFORCE-10" "REPARAMETRIZE" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "HalfCheetah-v4: REINFORCE-1 vs REINFORCE-10 vs REPARAMETRIZE" \
+  -o halfcheetah_gradient_comparison_eval_return.png
+
+# 9. Humanoid-v4 (default) – Optional
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sac_humanoid_Humanoid-v4_reparametrize_* \
+  -n "Humanoid-v4 (default)" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "Humanoid-v4: Evaluation Return (default)" \
+  -o humanoid_eval_return.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sac_humanoid_Humanoid-v4_reparametrize_* \
+  -n "Humanoid-v4 (default)" \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "Humanoid-v4: Q Values (default)" \
+  -o humanoid_q_values.png
+
+# 10. Hopper-v4: Single-Q vs Double-Q vs Clipped Double-Q (Section 8.2) → Figure 4
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sac_hopper_singlecritic_* \
+      /root/hw4/data/hw4_sac_sac_hopper_doubleq_* \
+      /root/hw4/data/hw4_sac_sac_hopper_clipq_* \
+  -n "Single-Q" "Double-Q" "Clipped Double-Q" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "Hopper-v4: Single-Q vs Double-Q vs Clipped Double-Q (eval_return)" \
+  -o hopper_eval_return_comparison.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sac_hopper_singlecritic_* \
+      /root/hw4/data/hw4_sac_sac_hopper_doubleq_* \
+      /root/hw4/data/hw4_sac_sac_hopper_clipq_* \
+  -n "Single-Q" "Double-Q" "Clipped Double-Q" \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "Hopper-v4: Single-Q vs Double-Q vs Clipped Double-Q (Q Values)" \
+  -o hopper_q_values_comparison.png
+
+# 11. Humanoid
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sac_humanoid_clipq_Humanoid-v4_reparametrize_* \
+  -n "Humanoid: Clipped Double-Q" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "Humanoid: Clipped Double-Q (eval_return)" \
+  -o humanoid_cipq_eval_return.png
+
+$SCRIPT \
+  -i /root/hw4/data/hw4_sac_sac_humanoid_clipq_Humanoid-v4_reparametrize_* \
+  -n "Humanoid: Clipped Double-Q" \
+  -d q_values \
+  -x "Environment Steps" \
+  -y "Q Values" \
+  -t "Humanoid: Clipped Double-Q (Q Values)" \
+  -o humanoid_cipq_q_values.png
+
+$SCRIPT \
+  -i "/root/hw4/data/hw4_sac_sac_humanoid_Humanoid-v4_reparametrize_*" \
+  -n "Default (mean)" \
+  -i "/root/hw4/data/hw4_sac_sac_humanoid_clipq_Humanoid-v4_reparametrize_*" \
+  -n "Clipped Double-Q (min)" \
+  -d eval_return \
+  -x "Environment Steps" \
+  -y "Evaluation Return" \
+  -t "Humanoid-v4: Default vs Clipped Double-Q" \
+  -o humanoid_default_vs_clipq_eval_return.png
+
+echo "🎉 모든 플롯 생성 완료! (총 22개 PNG 파일)"
+echo "   → y축이 'Evaluation Return' / 'Q Values'로 명확히 표시되었습니다."
+echo "   → PDF Figure 1~4에 바로 넣을 수 있도록 정리되었습니다."
+echo ""
+echo "주요 파일명 예시:"
+echo "   - reinforce_sanity_invertedpendulum_eval_return.png     ← Figure 1"
+echo "   - halfcheetah_gradient_comparison_eval_return.png       ← Figure 3"
+echo "   - hopper_eval_return_comparison.png                     ← Figure 4"

@@ -1,0 +1,9 @@
+python cas4160/scripts/parse_tensorboard.py \
+    --input_log_files \
+        data/hw3_dqn_dqn_CartPole-v1_s64_l2_d0.99_06-04-2026_10-06-43 \
+    --human_readable_names "DQN CartPole-v1" \
+    --data_key "eval_return" \
+    --title "DQN on CartPole-v1: Learning Curve" \
+    --x_label_name "Train Environment Steps" \
+    --y_label_name "Eval Return" \
+    --output_file "dqn_cartpole_learning_curve.png"

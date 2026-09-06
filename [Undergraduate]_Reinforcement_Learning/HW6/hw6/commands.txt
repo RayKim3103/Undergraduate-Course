@@ -1,0 +1,20 @@
+tmux new-session -d -s hw6_0_iter
+tmux attach -t hw6_0_iter
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_0_iter.yaml
+
+# 2~5 (random shooting + CEM + 변형 2개)
+tmux new-session -d -s hw6_multi
+tmux attach -t hw6_multi
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_multi_iter.yaml
+
+tmux new-session -d -s hw6_cem
+tmux attach -t hw6_cem
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem.yaml
+
+tmux new-session -d -s hw6_cem_h1
+tmux attach -t hw6_cem_h1
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem_H-1.yaml
+
+tmux new-session -d -s hw6_cem_k50
+tmux attach -t hw6_cem_k50
+python cas4160/scripts/run_hw6.py -cfg experiments/mpc/halfcheetah_cem_K-50.yaml

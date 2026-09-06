@@ -1,0 +1,240 @@
+{
+  "main": {
+    "id": "c61a8fb51e159578",
+    "type": "split",
+    "children": [
+      {
+        "id": "8341ac31b464cab5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47772e50ea1044c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "[Undergraduate]_Digital_Communications/lecture_notes/00 Project Report - Rayleigh Fading 음성 통신 구현.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00 Project Report - Rayleigh Fading 음성 통신 구현"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fb9b8ea30dc00dbd",
+    "type": "split",
+    "children": [
+      {
+        "id": "721784eb75ca79db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4223641ee1a857dd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "94888a6c2739b219",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "a2bceb4c14daeb08",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e0361f8122086828",
+    "type": "split",
+    "children": [
+      {
+        "id": "2177ffc287af54c4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ed7af8d79c77ad3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "[Undergraduate]_Digital_Communications/lecture_notes/00 Project Report - Rayleigh Fading 음성 통신 구현.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "백링크"
+            }
+          },
+          {
+            "id": "ae286c3f8bdfaf64",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "[Undergraduate]_Digital_Communications/lecture_notes/00 Project Report - Rayleigh Fading 음성 통신 구현.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "나가는 링크"
+            }
+          },
+          {
+            "id": "69f2a57920be5ffc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "45761039c3d9e693",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "ebae565c550a8d7c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "[Undergraduate]_Digital_Communications/lecture_notes/00 Project Report - Rayleigh Fading 음성 통신 구현.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "47772e50ea1044c3",
+  "lastOpenFiles": [
+    "[Undergraduate]_Digital_Communications/lecture_notes/00 Final Project - 디지털 통신 시스템 시뮬레이션.md",
+    "[Undergraduate]_Digital_Logic_Circuits/lecture_notes/08 유한상태기계 활용.md",
+    "[Undergraduate]_Digital_Logic_Circuits/lecture_notes/07 유한상태기계.md",
+    "[Undergraduate]_Digital_Logic_Circuits/lecture_notes/06 순차논리 설계.md",
+    "[Undergraduate]_Digital_Logic_Circuits/lecture_notes/04 조합논리 구현 기술.md",
+    "[Undergraduate]_Digital_Logic_Circuits/lecture_notes/03 조합논리 활용.md",
+    "[Undergraduate]_Digital_Logic_Circuits/lecture_notes/02 조합논리.md",
+    "[Undergraduate]_Digital_Logic_Circuits/lecture_notes",
+    "tmp/digital_logic_circuits_extract/08 Working with Finite State Machines.txt",
+    "tmp/digital_logic_circuits_extract/07 Finite State Machines.txt",
+    "tmp/digital_logic_circuits_extract/06 Sequential Logic Design.txt",
+    "tmp/digital_logic_circuits_extract/04 Combinational Logic Technologies.txt",
+    "tmp/digital_logic_circuits_extract/03 Working with Combinational Logic.txt",
+    "tmp/digital_logic_circuits_extract/02 Combinational Logic.txt",
+    "tmp/digital_logic_circuits_extract",
+    "tmp",
+    "[Undergraduate]_Digital_Logic_Circuits/temp_lecture_notes/08 Working with Finite State Machines.pdf",
+    "[Undergraduate]_Micro_Processor/lecture_notes/10A SSD Software 2 - Superblock LAST Annotated Image Copy.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/10 SSD Software 2 - Superblock LAST and FTL Functions.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/09 SSD Software 1 - FTL Overview BAST FAST.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/08 SSD Hardware 4 - NAND Flash Memory.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/07 SSD Overview 2 - SSD Architecture.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/06 SSD Overview 1 - Solid State Disk Basics.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/05 Computer Organization Chapter 7 - Multiprocessors.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/04A Computer Organization Chapter 6 - Storage and IO Topics Annotated Copy.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/04 Computer Organization Chapter 6 - Storage and IO Topics.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/03 ARM Chapter 3 - ARM Assembly Language Programming.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/02 ARM Chapter 2 - ARM Architecture.md",
+    "[Undergraduate]_Micro_Processor/lecture_notes/01 ARM Chapter 1 - Processor Design Introduction.md",
+    "tmp/micro_processor_ch8_preview/ch8_page_53.png",
+    "tmp/micro_processor_ch8_preview/ch8_page_41.png",
+    "tmp/micro_processor_ch8_preview/ch8_page_21.png",
+    "tmp/micro_processor_ch8_preview/ch8_page_11.png",
+    "tmp/micro_processor_ch8_preview/ch8_page_02.png",
+    "tmp/micro_processor_ch8_preview/ch8_page_01.png",
+    "[Undergraduate]_CMOS_Integrated_Circuit/lecture_notes/09 Sequential Circuit Design - 순차회로와 Timing.md",
+    "[Undergraduate]_CMOS_Integrated_Circuit/lecture_notes/08 Datapaths - 가산기 시프터 곱셈기.md",
+    "[Undergraduate]_CMOS_Integrated_Circuit/lecture_notes/07 Gates - 고급 CMOS 게이트.md",
+    "[Undergraduate]_Reinforcement_Learning/HW3/hw3_processes/2nd/lr_comparison/q_values_comparison.png",
+    "[Undergraduate]_Reinforcement_Learning/HW3/hw3_processes/2nd/lr_comparison/eval_return_comparison.png",
+    "[Undergraduate]_Reinforcement_Learning/HW3/hw3_processes/2nd/lr_comparison/critic_loss_comparison.png",
+    "[Undergraduate]_Reinforcement_Learning/HW3/hw3_processes/2nd/lr_comparison/cartpole_lr_comparison.png",
+    "[Undergraduate]_Reinforcement_Learning/HW7/hw7_final/README.md",
+    "[Undergraduate]_Reinforcement_Learning/HW7/hw7_final/installation.md",
+    "[Undergraduate]_Reinforcement_Learning/HW6/hw6/README.md",
+    "[Undergraduate]_Reinforcement_Learning/HW1/hw1/hw1/README.md"
+  ]
+}

@@ -1,0 +1,8 @@
+sh pointmaze_syn_prefs.sh \
+> pointmaze_syn_prefs.txt 2>&1 && \
+
+sh pointmaze.sh \
+> pointmaze_human_prefs.txt 2>&1 && \
+
+sh hopper.sh \
+> hopper_backflip.txt 2>&1
